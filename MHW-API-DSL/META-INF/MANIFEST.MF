@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MHW-API-DSL
-Bundle-SymbolicName: MHW-API-DSL; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: MHW-API-DSL;singleton:=true
+Automatic-Module-Name: MHW-API-DSL
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: mhw-api-dsl.mHW_API_DSL,
+ mhw-api-dsl.mHW_API_DSL.impl,
+ mhw-api-dsl.mHW_API_DSL.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
