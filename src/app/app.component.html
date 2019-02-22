@@ -8,6 +8,7 @@
   <a class="navbar-brand" href="#">Menu</a>
 
   <ul class="nav nav-tabs mr-auto">
+    <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#home">Home <span class="sr-only">(current)</span></a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Armors <span class="sr-only">(current)</span></a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Weapons <span class="sr-only">(current)</span></a></li>
     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">Charms <span class="sr-only">(current)</span></a></li>
@@ -22,6 +23,14 @@
 
 
 <div class="tab-content">
+  <div id="home" class="tab-pane fade">
+    <h3>HOME</h3>
+    <div class="form-group col-lg-8 centered text-center container">
+        <label for="comment">Write your request here:</label>
+        <textarea class="form-control" rows="15" id="comment"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary"> Submit </button>
+  </div>
   <div id="menu1" class="tab-pane fade">
     <h3>ARMORS</h3>
     <ul class="list-group">
