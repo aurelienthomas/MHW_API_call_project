@@ -10,6 +10,7 @@ import { WeaponSectionComponent } from './weapon-section/weapon-section.componen
 import { CharmSectionComponent } from './charm-section/charm-section.component';
 import { DecorationSectionComponent } from './decoration-section/decoration-section.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
+import { ArmorComponent } from './armor/armor.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeSectionComponent } from './home-section/home-section.component';
     WeaponSectionComponent,
     CharmSectionComponent,
     DecorationSectionComponent,
-    HomeSectionComponent
+    HomeSectionComponent,
+    ArmorComponent
   ],
   imports: [
     BrowserModule,

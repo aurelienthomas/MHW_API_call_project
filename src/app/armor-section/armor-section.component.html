@@ -1,31 +1,22 @@
 <h3>ARMORS</h3>
 <div class="container fluid">
   <div class="row">
-      <ul class="event-list">
-        <li>
+      <ul class="item-list">
+        <li *ngFor="let armor of armors">
           <time datetime="2014-07-20 0000">
             <span class="day"><img
-                src="https://assets.mhw-db.com/armor/e7cfa0acf10c8439b78639a0f59c2eb9ee9e2923.c8685d97610f608eae4850d6f53b9226.png"></span>
+                src={{armor.assets.imageMale}}></span>
           </time>
           <div class="info">
-            <h2 class="title">Slug</h2>
-            <p class="desc">Extends the time until your stamina cap decreases by 30%.</p>
+            <h2 class="title">{{armor.name}}</h2>
+            <p class="desc">{{armor.description}}</p>
             <ul>
-              <li style="width:50%;"><span class="fa fa-globe"></span> Common</li>
-              <li style="width:50%;"><span class="fa fa-graduation-cap"></span> Hat </li>
+              <li style="width:50%;"><span class="fa fa-globe"></span> {{armor.rarity}} </li>
+              <li style="width:50%;"><span class="fa fa-graduation-cap"></span> {{armor.type}} </li>
             </ul>
           </div>
-          <!--
-          <div class="social">
-            <ul>
-              <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-              <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-              <li class="google-plus" style="width:33%;"><a href="#google-plus"><span
-                    class="fa fa-google-plus"></span></a></li>
-            </ul>
-          </div>-->
         </li>
-        <li>
+        <!--<li>
             <time datetime="2014-07-20 0000">
               <span class="day"><img
                   src="https://assets.mhw-db.com/armor/cd3184a613f90e9176e3e0e2cf2541ba6fc36473.bfb2b2ab55d7f8badfcfafb6708edbe3.png"></span>
@@ -38,15 +29,6 @@
                 <li style="width:50%;"><span class="fa fa-hand-o-right"></span> Gloves </li>
               </ul>
             </div>
-            <!--
-            <div class="social">
-              <ul>
-                <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                <li class="google-plus" style="width:33%;"><a href="#google-plus"><span
-                      class="fa fa-google-plus"></span></a></li>
-              </ul>
-            </div>-->
           </li>
           <li>
               <time datetime="2014-07-20 0000">
@@ -61,16 +43,7 @@
                   <li style="width:50%;"><span class="fa fa-cog"></span> Armor </li>
                 </ul>
               </div>
-              <!--
-              <div class="social">
-                <ul>
-                  <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                  <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                  <li class="google-plus" style="width:33%;"><a href="#google-plus"><span
-                        class="fa fa-google-plus"></span></a></li>
-                </ul>
-              </div>-->
-            </li>
+            </li>-->
       </ul>
   </div>
 </div>
