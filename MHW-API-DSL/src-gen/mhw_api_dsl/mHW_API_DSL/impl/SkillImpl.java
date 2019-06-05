@@ -178,7 +178,7 @@ public class SkillImpl extends MinimalEObjectImpl.Container implements Skill
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SkillImpl()
+	public SkillImpl()
 	{
 		super();
 	}

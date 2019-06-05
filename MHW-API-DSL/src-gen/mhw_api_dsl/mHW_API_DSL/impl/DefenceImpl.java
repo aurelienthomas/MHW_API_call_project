@@ -94,7 +94,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DefenceImpl()
+	public DefenceImpl()
 	{
 		super();
 	}
