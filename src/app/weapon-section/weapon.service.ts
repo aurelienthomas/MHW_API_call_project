@@ -12,6 +12,7 @@ export class WeaponService {
 
   constructor() { }
 
+  //@ts-ignore
   getweapons(): Observable<Weapon[]> {
     console.log(of(WEAPONS))
     return of(WEAPONS);

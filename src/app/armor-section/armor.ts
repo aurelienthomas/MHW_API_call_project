@@ -5,22 +5,21 @@ export class Armor {
     rarity: number;
     rank: string;
     type: string;
-    resistances: any;
-    attributes:any;
-    slots:any;
-    skills:any;
-    crafting:any;
-    armorSet:any;
+    resistances?: any;
+    attributes?:any;
+    slots?:any;
+    skills?:any;
+    crafting?:any;
+    armorSet?:any;
+    defense?:any;
 
     constructor(armorObj: any) {
-        console.log("Creating Armor object")
+        console.log("Creating Weapon object")
         if (armorObj) {
             this.id = armorObj.id;
             this.name = armorObj.name;
-            this.assets = armorObj.assets["imageMale"];
-            this.rarity = armorObj.rarity;
-            this.rank = armorObj.rank;
             this.type = armorObj.type;
+            this.rarity = armorObj.rarity;
         }
     }
 }
