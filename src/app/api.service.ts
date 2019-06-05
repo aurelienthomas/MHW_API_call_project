@@ -14,6 +14,8 @@ export class ApiService {
 
   public getArmor() {}
 
+  public getWeapon() {}
+
   /*return this.httpClient.get<Armor[]>(this.apiArmor,
     { observe: 'response' }).pipe(tap(res => {
       this.retrieve_pagination_links(res); 

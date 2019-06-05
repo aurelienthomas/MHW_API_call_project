@@ -1,4 +1,3 @@
-//need to include all fields from JSON to prevent errors
 export class Armor {
     id: number;
     name: string;
@@ -12,8 +11,6 @@ export class Armor {
     skills:any;
     crafting:any;
     armorSet:any;
-    
-
 
     constructor(armorObj: any) {
         console.log("Creating Armor object")
