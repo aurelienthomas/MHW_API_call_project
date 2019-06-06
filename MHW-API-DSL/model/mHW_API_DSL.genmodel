@@ -33,6 +33,7 @@
     </genClasses>
     <genClasses ecoreClass="mHW_API_DSL.ecore#//Slot">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Slot/rank"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Slot/decoration"/>
     </genClasses>
     <genClasses ecoreClass="mHW_API_DSL.ecore#//Resistance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Resistance/fire"/>
@@ -49,6 +50,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Skill/skill"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Skill/skillName"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Skill/armor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Skill/charm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Skill/decoration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Skill/weapon"/>
     </genClasses>
     <genClasses ecoreClass="mHW_API_DSL.ecore#//Item">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Item/id"/>
@@ -65,6 +69,36 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Defence/base"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Defence/max"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Defence/augmented"/>
+    </genClasses>
+    <genClasses ecoreClass="mHW_API_DSL.ecore#//Charm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Charm/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Charm/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Charm/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Charm/rarity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Charm/level"/>
+    </genClasses>
+    <genClasses ecoreClass="mHW_API_DSL.ecore#//Decoration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Decoration/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Decoration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Decoration/rarity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Decoration/skill"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Decoration/slot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Decoration/rank"/>
+    </genClasses>
+    <genClasses ecoreClass="mHW_API_DSL.ecore#//Weapon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Weapon/slot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Weapon/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Weapon/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Weapon/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Weapon/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Weapon/rarity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Weapon/attack"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Weapon/element"/>
+    </genClasses>
+    <genClasses ecoreClass="mHW_API_DSL.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mHW_API_DSL.ecore#//Element/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mHW_API_DSL.ecore#//Element/weapon"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
