@@ -18,6 +18,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.blade.Blade;
+
 import mhw_api_dsl.mHW_API_DSL.Armor;
 import mhw_api_dsl.mHW_API_DSL.MHW_API_DSLFactory;
 import mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage;
@@ -29,6 +31,7 @@ public class Server {
 		// TODO Auto-generated method stub
 		String result = getResultFromRequest("https://mhw-db.com/armor");
 		generateXMIFile(result);
+		  Blade.of().get("/", ctx -> ctx.text("Hello Blade")).start();
 	}
 	
 	public static String getResultFromRequest(String request) throws Exception {

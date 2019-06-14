@@ -65,7 +65,7 @@ public class SlotImpl extends MinimalEObjectImpl.Container implements Slot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SlotImpl() {
+	public SlotImpl() {
 		super();
 	}
 

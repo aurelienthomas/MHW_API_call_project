@@ -255,7 +255,7 @@ public class ArmorImpl extends MinimalEObjectImpl.Container implements Armor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArmorImpl() {
+	public ArmorImpl() {
 		super();
 	}
 
