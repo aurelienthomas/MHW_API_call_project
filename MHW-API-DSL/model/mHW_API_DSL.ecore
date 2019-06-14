@@ -27,6 +27,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Slot">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rank" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decoration" eType="#//Decoration"
+        eOpposite="#//Decoration/slot"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Resistance">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fire" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -43,7 +45,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skill" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="armor" upperBound="-1"
+<<<<<<< HEAD
         eType="#//Armor"/>
+=======
+        eType="#//Armor" eOpposite="#//Armor/skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="charm" eType="#//Charm"
+        eOpposite="#//Charm/skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decoration" eType="#//Decoration"
+        eOpposite="#//Decoration/skill"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" upperBound="-1"
+        eType="#//Weapon" eOpposite="#//Weapon/skill"/>
+>>>>>>> c8f1337b239f2cbc0404b464f8c2f95443ab36f7
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Item">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -60,5 +72,41 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="base" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="augmented" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Charm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" upperBound="-1"
+        eType="#//Skill" eOpposite="#//Skill/charm"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rarity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Decoration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rarity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" lowerBound="1" eType="#//Skill"
+        eOpposite="#//Skill/decoration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slot" eType="#//Slot" eOpposite="#//Slot/decoration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rank" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Weapon">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slot" upperBound="-1" eType="#//Slot"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="skill" eType="#//Skill"
+        eOpposite="#//Skill/weapon"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rarity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//Element"
+        eOpposite="#//Element/weapon"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weapon" eType="#//Weapon"
+        eOpposite="#//Weapon/element"/>
   </eClassifiers>
 </ecore:EPackage>
