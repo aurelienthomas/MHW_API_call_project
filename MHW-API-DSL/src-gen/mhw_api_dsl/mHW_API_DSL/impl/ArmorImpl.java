@@ -498,7 +498,8 @@ public class ArmorImpl extends MinimalEObjectImpl.Container implements Armor
 	{
 		if (skill == null)
 		{
-			skill = new EObjectWithInverseResolvingEList.ManyInverse<Skill>(Skill.class, this, MHW_API_DSLPackage.ARMOR__SKILL, MHW_API_DSLPackage.SKILL__ARMOR);
+			//skill = new EObjectWithInverseResolvingEList.ManyInverse<Skill>(Skill.class, this, MHW_API_DSLPackage.ARMOR__SKILL, MHW_API_DSLPackage.SKILL__ARMOR);
+			skill = new EObjectContainmentEList<Skill>(Skill.class, this, MHW_API_DSLPackage.ARMOR__SKILL);
 		}
 		return skill;
 	}

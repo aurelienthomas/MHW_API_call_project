@@ -13,7 +13,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="slot" upperBound="-1" eType="#//Slot"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="skill" upperBound="-1"
-        eType="#//Skill" eOpposite="#//Skill/armor"/>
+        eType="#//Skill" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defence" eType="#//Defence"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resistance" eType="#//Resistance"/>
   </eClassifiers>
@@ -43,7 +43,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skill" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="skillName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="armor" upperBound="-1"
-        eType="#//Armor" eOpposite="#//Armor/skill"/>
+        eType="#//Armor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Item">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

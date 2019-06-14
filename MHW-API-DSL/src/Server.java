@@ -4,10 +4,16 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,7 +49,13 @@ public class Server {
 	public static void generateXMIFile(String chaine) throws Exception {
 		MHW_API_DSLPackageImpl.init();
 		
-		MHW_API_DSLFactory factory = MHW_API_DSLFactory.eINSTANCE;
+		Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
+		Map<String, Object> m = reg.getExtensionToFactoryMap();
+		m.put("mhw", new XMIResourceFactoryImpl());
+		
+		ResourceSet resSet = new ResourceSetImpl();
+		
+		Resource resource = resSet.createResource(URI.createURI("MyMHW.mhw"));
 		
 		JSONArray jsonArray = new JSONArray(chaine);
 		for(int i = 0; i < jsonArray.length(); i++) {
@@ -75,8 +87,8 @@ public class Server {
 			//Skills
 			JSONArray skillsArray = new JSONArray(jsonObject.get("skills").toString());
 			ArrayList<SkillImpl> skillsList = new ArrayList<SkillImpl>();
-			for(int j = 0; j < skillsArray.length(); j++) {
-				JSONObject skillObject = skillsArray.getJSONObject(j);
+			for(int k = 0; k < skillsArray.length(); k++) {
+				JSONObject skillObject = skillsArray.getJSONObject(k);
 				SkillImpl skill = new SkillImpl();
 				skill.setId(skillObject.getInt("id"));
 				skill.setLevel(skillObject.getInt("level"));
@@ -88,16 +100,29 @@ public class Server {
 			armor.eSet(MHW_API_DSLPackage.ARMOR__SKILL, skillsList);
 			
 			//Defense
-			JSONObject defenseObject = new JSONObject(jsonObject.get("defense").toString());
-			DefenceImpl defense = new DefenceImpl();
-			defense.setBase(defenseObject.getInt("base"));
-			defense.setAugmented(defenseObject.getInt("augmented"));
-			defense.setMax(defenseObject.getInt("max"));
-			armor.setDefence(defense);
+//			JSONObject defenseObject = new JSONObject(jsonObject.get("defense").toString());
+//			DefenceImpl defense = new DefenceImpl();
+//			defense.setBase(defenseObject.getInt("base"));
+//			defense.setAugmented(defenseObject.getInt("augmented"));
+//			defense.setMax(defenseObject.getInt("max"));
+//			armor.setDefence(defense);
 			
 			//Resistance
+//			JSONObject resistanceObject = new JSONObject(jsonObject.get("resistances").toString());
+//			ResistanceImpl resistance = new ResistanceImpl();
+//			resistance.setFire(resistanceObject.getInt("fire"));
+//			resistance.setIce(resistanceObject.getInt("ice"));
+//			resistance.setDragon(resistanceObject.getInt("dragon"));
+//			resistance.setThunder(resistanceObject.getInt("thunder"));
+//			resistance.setWater(resistanceObject.getInt("water"));
+//			armor.setResistance(resistance);
+			
+			//Sérialization dans le fichier XMI
+			resource.getContents().add(armor);
+			
 			
 		}
+		resource.save(Collections.EMPTY_MAP);
 		System.out.println("Fin");
 	}
 }

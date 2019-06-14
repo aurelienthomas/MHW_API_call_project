@@ -136,7 +136,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResistanceImpl()
+	public ResistanceImpl()
 	{
 		super();
 	}
