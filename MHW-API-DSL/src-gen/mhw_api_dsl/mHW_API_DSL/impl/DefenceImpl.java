@@ -20,15 +20,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.DefenceImpl#getBase <em>Base</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.DefenceImpl#getMax <em>Max</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.DefenceImpl#getAugmented <em>Augmented</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.DefenceImpl#getBase <em>Base</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.DefenceImpl#getMax <em>Max</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.DefenceImpl#getAugmented <em>Augmented</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
-{
+public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence {
 	/**
 	 * The default value of the '{@link #getBase() <em>Base</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -94,8 +93,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DefenceImpl()
-	{
+	protected DefenceImpl() {
 		super();
 	}
 
@@ -105,8 +103,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return MHW_API_DSLPackage.Literals.DEFENCE;
 	}
 
@@ -116,8 +113,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public int getBase()
-	{
+	public int getBase() {
 		return base;
 	}
 
@@ -127,8 +123,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public void setBase(int newBase)
-	{
+	public void setBase(int newBase) {
 		int oldBase = base;
 		base = newBase;
 		if (eNotificationRequired())
@@ -141,8 +136,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public int getMax()
-	{
+	public int getMax() {
 		return max;
 	}
 
@@ -152,8 +146,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public void setMax(int newMax)
-	{
+	public void setMax(int newMax) {
 		int oldMax = max;
 		max = newMax;
 		if (eNotificationRequired())
@@ -166,8 +159,7 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public int getAugmented()
-	{
+	public int getAugmented() {
 		return augmented;
 	}
 
@@ -177,12 +169,12 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public void setAugmented(int newAugmented)
-	{
+	public void setAugmented(int newAugmented) {
 		int oldAugmented = augmented;
 		augmented = newAugmented;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.DEFENCE__AUGMENTED, oldAugmented, augmented));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.DEFENCE__AUGMENTED, oldAugmented,
+					augmented));
 	}
 
 	/**
@@ -191,16 +183,14 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.DEFENCE__BASE:
-				return getBase();
-			case MHW_API_DSLPackage.DEFENCE__MAX:
-				return getMax();
-			case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
-				return getAugmented();
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.DEFENCE__BASE:
+			return getBase();
+		case MHW_API_DSLPackage.DEFENCE__MAX:
+			return getMax();
+		case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
+			return getAugmented();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,19 +201,17 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.DEFENCE__BASE:
-				setBase((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.DEFENCE__MAX:
-				setMax((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
-				setAugmented((Integer)newValue);
-				return;
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.DEFENCE__BASE:
+			setBase((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.DEFENCE__MAX:
+			setMax((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
+			setAugmented((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -234,19 +222,17 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.DEFENCE__BASE:
-				setBase(BASE_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.DEFENCE__MAX:
-				setMax(MAX_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
-				setAugmented(AUGMENTED_EDEFAULT);
-				return;
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.DEFENCE__BASE:
+			setBase(BASE_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.DEFENCE__MAX:
+			setMax(MAX_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
+			setAugmented(AUGMENTED_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -257,16 +243,14 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.DEFENCE__BASE:
-				return base != BASE_EDEFAULT;
-			case MHW_API_DSLPackage.DEFENCE__MAX:
-				return max != MAX_EDEFAULT;
-			case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
-				return augmented != AUGMENTED_EDEFAULT;
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.DEFENCE__BASE:
+			return base != BASE_EDEFAULT;
+		case MHW_API_DSLPackage.DEFENCE__MAX:
+			return max != MAX_EDEFAULT;
+		case MHW_API_DSLPackage.DEFENCE__AUGMENTED:
+			return augmented != AUGMENTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -277,9 +261,9 @@ public class DefenceImpl extends MinimalEObjectImpl.Container implements Defence
 	 * @generated
 	 */
 	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (base: ");

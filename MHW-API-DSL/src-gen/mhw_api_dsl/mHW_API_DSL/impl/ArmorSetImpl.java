@@ -30,17 +30,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ArmorSetImpl#getId <em>Id</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ArmorSetImpl#getName <em>Name</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ArmorSetImpl#getRank <em>Rank</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ArmorSetImpl#getPieces <em>Pieces</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ArmorSetImpl#getArmor <em>Armor</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ArmorSetImpl#getId <em>Id</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ArmorSetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ArmorSetImpl#getRank <em>Rank</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ArmorSetImpl#getPieces <em>Pieces</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ArmorSetImpl#getArmor <em>Armor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorSet
-{
+public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorSet {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,8 +135,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArmorSetImpl()
-	{
+	protected ArmorSetImpl() {
 		super();
 	}
 
@@ -147,8 +145,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return MHW_API_DSLPackage.Literals.ARMOR_SET;
 	}
 
@@ -158,8 +155,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public int getId()
-	{
+	public int getId() {
 		return id;
 	}
 
@@ -169,8 +165,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public void setId(int newId)
-	{
+	public void setId(int newId) {
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
@@ -183,8 +178,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
 
@@ -194,8 +188,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public void setName(String newName)
-	{
+	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -208,8 +201,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public String getRank()
-	{
+	public String getRank() {
 		return rank;
 	}
 
@@ -219,8 +211,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public void setRank(String newRank)
-	{
+	public void setRank(String newRank) {
 		String oldRank = rank;
 		rank = newRank;
 		if (eNotificationRequired())
@@ -233,8 +224,7 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public int getPieces()
-	{
+	public int getPieces() {
 		return pieces;
 	}
 
@@ -244,12 +234,12 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public void setPieces(int newPieces)
-	{
+	public void setPieces(int newPieces) {
 		int oldPieces = pieces;
 		pieces = newPieces;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.ARMOR_SET__PIECES, oldPieces, pieces));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.ARMOR_SET__PIECES, oldPieces,
+					pieces));
 	}
 
 	/**
@@ -258,10 +248,8 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public EList<Armor> getArmor()
-	{
-		if (armor == null)
-		{
+	public EList<Armor> getArmor() {
+		if (armor == null) {
 			armor = new EObjectContainmentEList<Armor>(Armor.class, this, MHW_API_DSLPackage.ARMOR_SET__ARMOR);
 		}
 		return armor;
@@ -273,12 +261,10 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
-				return ((InternalEList<?>)getArmor()).basicRemove(otherEnd, msgs);
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
+			return ((InternalEList<?>) getArmor()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,20 +275,18 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ARMOR_SET__ID:
-				return getId();
-			case MHW_API_DSLPackage.ARMOR_SET__NAME:
-				return getName();
-			case MHW_API_DSLPackage.ARMOR_SET__RANK:
-				return getRank();
-			case MHW_API_DSLPackage.ARMOR_SET__PIECES:
-				return getPieces();
-			case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
-				return getArmor();
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ARMOR_SET__ID:
+			return getId();
+		case MHW_API_DSLPackage.ARMOR_SET__NAME:
+			return getName();
+		case MHW_API_DSLPackage.ARMOR_SET__RANK:
+			return getRank();
+		case MHW_API_DSLPackage.ARMOR_SET__PIECES:
+			return getPieces();
+		case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
+			return getArmor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -314,26 +298,24 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ARMOR_SET__ID:
-				setId((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__NAME:
-				setName((String)newValue);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__RANK:
-				setRank((String)newValue);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__PIECES:
-				setPieces((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
-				getArmor().clear();
-				getArmor().addAll((Collection<? extends Armor>)newValue);
-				return;
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ARMOR_SET__ID:
+			setId((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__NAME:
+			setName((String) newValue);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__RANK:
+			setRank((String) newValue);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__PIECES:
+			setPieces((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
+			getArmor().clear();
+			getArmor().addAll((Collection<? extends Armor>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -344,25 +326,23 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ARMOR_SET__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__RANK:
-				setRank(RANK_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__PIECES:
-				setPieces(PIECES_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
-				getArmor().clear();
-				return;
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ARMOR_SET__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__RANK:
+			setRank(RANK_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__PIECES:
+			setPieces(PIECES_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
+			getArmor().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -373,20 +353,18 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ARMOR_SET__ID:
-				return id != ID_EDEFAULT;
-			case MHW_API_DSLPackage.ARMOR_SET__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MHW_API_DSLPackage.ARMOR_SET__RANK:
-				return RANK_EDEFAULT == null ? rank != null : !RANK_EDEFAULT.equals(rank);
-			case MHW_API_DSLPackage.ARMOR_SET__PIECES:
-				return pieces != PIECES_EDEFAULT;
-			case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
-				return armor != null && !armor.isEmpty();
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ARMOR_SET__ID:
+			return id != ID_EDEFAULT;
+		case MHW_API_DSLPackage.ARMOR_SET__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case MHW_API_DSLPackage.ARMOR_SET__RANK:
+			return RANK_EDEFAULT == null ? rank != null : !RANK_EDEFAULT.equals(rank);
+		case MHW_API_DSLPackage.ARMOR_SET__PIECES:
+			return pieces != PIECES_EDEFAULT;
+		case MHW_API_DSLPackage.ARMOR_SET__ARMOR:
+			return armor != null && !armor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -397,9 +375,9 @@ public class ArmorSetImpl extends MinimalEObjectImpl.Container implements ArmorS
 	 * @generated
 	 */
 	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");

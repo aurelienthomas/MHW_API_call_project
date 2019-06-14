@@ -23,15 +23,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.MaterialImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.MaterialImpl#getArmor <em>Armor</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.MaterialImpl#getItem <em>Item</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.MaterialImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.MaterialImpl#getArmor <em>Armor</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.MaterialImpl#getItem <em>Item</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MaterialImpl extends MinimalEObjectImpl.Container implements Material
-{
+public class MaterialImpl extends MinimalEObjectImpl.Container implements Material {
 	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,8 +76,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MaterialImpl()
-	{
+	protected MaterialImpl() {
 		super();
 	}
 
@@ -88,8 +86,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return MHW_API_DSLPackage.Literals.MATERIAL;
 	}
 
@@ -99,8 +96,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public int getQuantity()
-	{
+	public int getQuantity() {
 		return quantity;
 	}
 
@@ -110,12 +106,12 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public void setQuantity(int newQuantity)
-	{
+	public void setQuantity(int newQuantity) {
 		int oldQuantity = quantity;
 		quantity = newQuantity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.MATERIAL__QUANTITY, oldQuantity, quantity));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.MATERIAL__QUANTITY, oldQuantity,
+					quantity));
 	}
 
 	/**
@@ -124,16 +120,14 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public Armor getArmor()
-	{
-		if (armor != null && armor.eIsProxy())
-		{
-			InternalEObject oldArmor = (InternalEObject)armor;
-			armor = (Armor)eResolveProxy(oldArmor);
-			if (armor != oldArmor)
-			{
+	public Armor getArmor() {
+		if (armor != null && armor.eIsProxy()) {
+			InternalEObject oldArmor = (InternalEObject) armor;
+			armor = (Armor) eResolveProxy(oldArmor);
+			if (armor != oldArmor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MHW_API_DSLPackage.MATERIAL__ARMOR, oldArmor, armor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MHW_API_DSLPackage.MATERIAL__ARMOR,
+							oldArmor, armor));
 			}
 		}
 		return armor;
@@ -144,8 +138,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Armor basicGetArmor()
-	{
+	public Armor basicGetArmor() {
 		return armor;
 	}
 
@@ -155,8 +148,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public void setArmor(Armor newArmor)
-	{
+	public void setArmor(Armor newArmor) {
 		Armor oldArmor = armor;
 		armor = newArmor;
 		if (eNotificationRequired())
@@ -169,16 +161,14 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public Item getItem()
-	{
-		if (item != null && item.eIsProxy())
-		{
-			InternalEObject oldItem = (InternalEObject)item;
-			item = (Item)eResolveProxy(oldItem);
-			if (item != oldItem)
-			{
+	public Item getItem() {
+		if (item != null && item.eIsProxy()) {
+			InternalEObject oldItem = (InternalEObject) item;
+			item = (Item) eResolveProxy(oldItem);
+			if (item != oldItem) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MHW_API_DSLPackage.MATERIAL__ITEM, oldItem, item));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MHW_API_DSLPackage.MATERIAL__ITEM,
+							oldItem, item));
 			}
 		}
 		return item;
@@ -189,8 +179,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Item basicGetItem()
-	{
+	public Item basicGetItem() {
 		return item;
 	}
 
@@ -200,8 +189,7 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public void setItem(Item newItem)
-	{
+	public void setItem(Item newItem) {
 		Item oldItem = item;
 		item = newItem;
 		if (eNotificationRequired())
@@ -214,18 +202,18 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.MATERIAL__QUANTITY:
-				return getQuantity();
-			case MHW_API_DSLPackage.MATERIAL__ARMOR:
-				if (resolve) return getArmor();
-				return basicGetArmor();
-			case MHW_API_DSLPackage.MATERIAL__ITEM:
-				if (resolve) return getItem();
-				return basicGetItem();
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.MATERIAL__QUANTITY:
+			return getQuantity();
+		case MHW_API_DSLPackage.MATERIAL__ARMOR:
+			if (resolve)
+				return getArmor();
+			return basicGetArmor();
+		case MHW_API_DSLPackage.MATERIAL__ITEM:
+			if (resolve)
+				return getItem();
+			return basicGetItem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -236,19 +224,17 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.MATERIAL__QUANTITY:
-				setQuantity((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.MATERIAL__ARMOR:
-				setArmor((Armor)newValue);
-				return;
-			case MHW_API_DSLPackage.MATERIAL__ITEM:
-				setItem((Item)newValue);
-				return;
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.MATERIAL__QUANTITY:
+			setQuantity((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.MATERIAL__ARMOR:
+			setArmor((Armor) newValue);
+			return;
+		case MHW_API_DSLPackage.MATERIAL__ITEM:
+			setItem((Item) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -259,19 +245,17 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.MATERIAL__QUANTITY:
-				setQuantity(QUANTITY_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.MATERIAL__ARMOR:
-				setArmor((Armor)null);
-				return;
-			case MHW_API_DSLPackage.MATERIAL__ITEM:
-				setItem((Item)null);
-				return;
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.MATERIAL__QUANTITY:
+			setQuantity(QUANTITY_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.MATERIAL__ARMOR:
+			setArmor((Armor) null);
+			return;
+		case MHW_API_DSLPackage.MATERIAL__ITEM:
+			setItem((Item) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -282,16 +266,14 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.MATERIAL__QUANTITY:
-				return quantity != QUANTITY_EDEFAULT;
-			case MHW_API_DSLPackage.MATERIAL__ARMOR:
-				return armor != null;
-			case MHW_API_DSLPackage.MATERIAL__ITEM:
-				return item != null;
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.MATERIAL__QUANTITY:
+			return quantity != QUANTITY_EDEFAULT;
+		case MHW_API_DSLPackage.MATERIAL__ARMOR:
+			return armor != null;
+		case MHW_API_DSLPackage.MATERIAL__ITEM:
+			return item != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -302,9 +284,9 @@ public class MaterialImpl extends MinimalEObjectImpl.Container implements Materi
 	 * @generated
 	 */
 	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (quantity: ");

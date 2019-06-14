@@ -19,11 +19,10 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage
  * @generated
  */
-public class MHW_API_DSLSwitch<T> extends Switch<T>
-{
+public class MHW_API_DSLSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -38,10 +37,8 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MHW_API_DSLSwitch()
-	{
-		if (modelPackage == null)
-		{
+	public MHW_API_DSLSwitch() {
+		if (modelPackage == null) {
 			modelPackage = MHW_API_DSLPackage.eINSTANCE;
 		}
 	}
@@ -55,8 +52,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage)
-	{
+	protected boolean isSwitchFor(EPackage ePackage) {
 		return ePackage == modelPackage;
 	}
 
@@ -68,67 +64,101 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject)
-	{
-		switch (classifierID)
-		{
-			case MHW_API_DSLPackage.ARMOR:
-			{
-				Armor armor = (Armor)theEObject;
-				T result = caseArmor(armor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.ARMOR_SET:
-			{
-				ArmorSet armorSet = (ArmorSet)theEObject;
-				T result = caseArmorSet(armorSet);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.SLOT:
-			{
-				Slot slot = (Slot)theEObject;
-				T result = caseSlot(slot);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.RESISTANCE:
-			{
-				Resistance resistance = (Resistance)theEObject;
-				T result = caseResistance(resistance);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.SKILL:
-			{
-				Skill skill = (Skill)theEObject;
-				T result = caseSkill(skill);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.ITEM:
-			{
-				Item item = (Item)theEObject;
-				T result = caseItem(item);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.MATERIAL:
-			{
-				Material material = (Material)theEObject;
-				T result = caseMaterial(material);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MHW_API_DSLPackage.DEFENCE:
-			{
-				Defence defence = (Defence)theEObject;
-				T result = caseDefence(defence);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
+	protected T doSwitch(int classifierID, EObject theEObject) {
+		switch (classifierID) {
+		case MHW_API_DSLPackage.ARMOR: {
+			Armor armor = (Armor) theEObject;
+			T result = caseArmor(armor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.ARMOR_SET: {
+			ArmorSet armorSet = (ArmorSet) theEObject;
+			T result = caseArmorSet(armorSet);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.SLOT: {
+			Slot slot = (Slot) theEObject;
+			T result = caseSlot(slot);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.RESISTANCE: {
+			Resistance resistance = (Resistance) theEObject;
+			T result = caseResistance(resistance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.SKILL: {
+			Skill skill = (Skill) theEObject;
+			T result = caseSkill(skill);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.ITEM: {
+			Item item = (Item) theEObject;
+			T result = caseItem(item);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.MATERIAL: {
+			Material material = (Material) theEObject;
+			T result = caseMaterial(material);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.DEFENCE: {
+			Defence defence = (Defence) theEObject;
+			T result = caseDefence(defence);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.CHARM: {
+			Charm charm = (Charm) theEObject;
+			T result = caseCharm(charm);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.DECORATION: {
+			Decoration decoration = (Decoration) theEObject;
+			T result = caseDecoration(decoration);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.WEAPON: {
+			Weapon weapon = (Weapon) theEObject;
+			T result = caseWeapon(weapon);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.ELEMENT: {
+			Element element = (Element) theEObject;
+			T result = caseElement(element);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MHW_API_DSLPackage.REQUEST: {
+			Request request = (Request) theEObject;
+			T result = caseRequest(request);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		default:
+			return defaultCase(theEObject);
 		}
 	}
 
@@ -143,8 +173,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArmor(Armor object)
-	{
+	public T caseArmor(Armor object) {
 		return null;
 	}
 
@@ -159,8 +188,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArmorSet(ArmorSet object)
-	{
+	public T caseArmorSet(ArmorSet object) {
 		return null;
 	}
 
@@ -175,8 +203,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSlot(Slot object)
-	{
+	public T caseSlot(Slot object) {
 		return null;
 	}
 
@@ -191,8 +218,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResistance(Resistance object)
-	{
+	public T caseResistance(Resistance object) {
 		return null;
 	}
 
@@ -207,8 +233,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSkill(Skill object)
-	{
+	public T caseSkill(Skill object) {
 		return null;
 	}
 
@@ -223,8 +248,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseItem(Item object)
-	{
+	public T caseItem(Item object) {
 		return null;
 	}
 
@@ -239,8 +263,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMaterial(Material object)
-	{
+	public T caseMaterial(Material object) {
 		return null;
 	}
 
@@ -255,8 +278,82 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDefence(Defence object)
-	{
+	public T caseDefence(Defence object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Charm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Charm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCharm(Charm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Decoration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Decoration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDecoration(Decoration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Weapon</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Weapon</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWeapon(Weapon object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElement(Element object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequest(Request object) {
 		return null;
 	}
 
@@ -272,8 +369,7 @@ public class MHW_API_DSLSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object)
-	{
+	public T defaultCase(EObject object) {
 		return null;
 	}
 

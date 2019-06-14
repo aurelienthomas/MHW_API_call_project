@@ -4,21 +4,27 @@ package mhw_api_dsl.mHW_API_DSL.impl;
 
 import mhw_api_dsl.mHW_API_DSL.Armor;
 import mhw_api_dsl.mHW_API_DSL.ArmorSet;
+import mhw_api_dsl.mHW_API_DSL.Charm;
+import mhw_api_dsl.mHW_API_DSL.Decoration;
 import mhw_api_dsl.mHW_API_DSL.Defence;
+import mhw_api_dsl.mHW_API_DSL.Element;
 import mhw_api_dsl.mHW_API_DSL.Item;
 import mhw_api_dsl.mHW_API_DSL.MHW_API_DSLFactory;
 import mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage;
 import mhw_api_dsl.mHW_API_DSL.Material;
+import mhw_api_dsl.mHW_API_DSL.Request;
 import mhw_api_dsl.mHW_API_DSL.Resistance;
 import mhw_api_dsl.mHW_API_DSL.Skill;
 import mhw_api_dsl.mHW_API_DSL.Slot;
 
+import mhw_api_dsl.mHW_API_DSL.Weapon;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,8 +32,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLPackage
-{
+public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,6 +90,41 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	private EClass defenceEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass charmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass decorationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass weaponEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requestEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -95,12 +135,11 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#eNS_URI
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private MHW_API_DSLPackageImpl()
-	{
+	private MHW_API_DSLPackageImpl() {
 		super(eNS_URI, MHW_API_DSLFactory.eINSTANCE);
 	}
 
@@ -123,15 +162,20 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static MHW_API_DSLPackage init()
-	{
-		if (isInited) return (MHW_API_DSLPackage)EPackage.Registry.INSTANCE.getEPackage(MHW_API_DSLPackage.eNS_URI);
+	public static MHW_API_DSLPackage init() {
+		if (isInited)
+			return (MHW_API_DSLPackage) EPackage.Registry.INSTANCE.getEPackage(MHW_API_DSLPackage.eNS_URI);
 
 		// Obtain or create and register package
 		Object registeredMHW_API_DSLPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		MHW_API_DSLPackageImpl theMHW_API_DSLPackage = registeredMHW_API_DSLPackage instanceof MHW_API_DSLPackageImpl ? (MHW_API_DSLPackageImpl)registeredMHW_API_DSLPackage : new MHW_API_DSLPackageImpl();
+		MHW_API_DSLPackageImpl theMHW_API_DSLPackage = registeredMHW_API_DSLPackage instanceof MHW_API_DSLPackageImpl
+				? (MHW_API_DSLPackageImpl) registeredMHW_API_DSLPackage
+				: new MHW_API_DSLPackageImpl();
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMHW_API_DSLPackage.createPackageContents();
@@ -153,8 +197,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getArmor()
-	{
+	public EClass getArmor() {
 		return armorEClass;
 	}
 
@@ -164,9 +207,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Id()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(0);
+	public EAttribute getArmor_Id() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -175,9 +217,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Slug()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(1);
+	public EAttribute getArmor_Slug() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -186,9 +227,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Name()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(2);
+	public EAttribute getArmor_Name() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -197,9 +237,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Type()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(3);
+	public EAttribute getArmor_Type() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -208,9 +247,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Rank()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(4);
+	public EAttribute getArmor_Rank() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -219,9 +257,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_Rarity()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(5);
+	public EAttribute getArmor_Rarity() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -230,9 +267,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_ImageMale()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(6);
+	public EAttribute getArmor_ImageMale() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -241,9 +277,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmor_ImageFemale()
-	{
-		return (EAttribute)armorEClass.getEStructuralFeatures().get(7);
+	public EAttribute getArmor_ImageFemale() {
+		return (EAttribute) armorEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -252,9 +287,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getArmor_Slot()
-	{
-		return (EReference)armorEClass.getEStructuralFeatures().get(8);
+	public EReference getArmor_Slot() {
+		return (EReference) armorEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -263,9 +297,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getArmor_Skill()
-	{
-		return (EReference)armorEClass.getEStructuralFeatures().get(9);
+	public EReference getArmor_Skill() {
+		return (EReference) armorEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -274,9 +307,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getArmor_Defence()
-	{
-		return (EReference)armorEClass.getEStructuralFeatures().get(10);
+	public EReference getArmor_Defence() {
+		return (EReference) armorEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -285,9 +317,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getArmor_Resistance()
-	{
-		return (EReference)armorEClass.getEStructuralFeatures().get(11);
+	public EReference getArmor_Resistance() {
+		return (EReference) armorEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -296,8 +327,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getArmorSet()
-	{
+	public EClass getArmorSet() {
 		return armorSetEClass;
 	}
 
@@ -307,9 +337,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmorSet_Id()
-	{
-		return (EAttribute)armorSetEClass.getEStructuralFeatures().get(0);
+	public EAttribute getArmorSet_Id() {
+		return (EAttribute) armorSetEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -318,9 +347,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmorSet_Name()
-	{
-		return (EAttribute)armorSetEClass.getEStructuralFeatures().get(1);
+	public EAttribute getArmorSet_Name() {
+		return (EAttribute) armorSetEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -329,9 +357,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmorSet_Rank()
-	{
-		return (EAttribute)armorSetEClass.getEStructuralFeatures().get(2);
+	public EAttribute getArmorSet_Rank() {
+		return (EAttribute) armorSetEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -340,9 +367,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArmorSet_Pieces()
-	{
-		return (EAttribute)armorSetEClass.getEStructuralFeatures().get(3);
+	public EAttribute getArmorSet_Pieces() {
+		return (EAttribute) armorSetEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -351,9 +377,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getArmorSet_Armor()
-	{
-		return (EReference)armorSetEClass.getEStructuralFeatures().get(4);
+	public EReference getArmorSet_Armor() {
+		return (EReference) armorSetEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -362,8 +387,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getSlot()
-	{
+	public EClass getSlot() {
 		return slotEClass;
 	}
 
@@ -373,9 +397,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSlot_Rank()
-	{
-		return (EAttribute)slotEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSlot_Rank() {
+		return (EAttribute) slotEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -384,8 +407,17 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getResistance()
-	{
+	public EReference getSlot_Decoration() {
+		return (EReference) slotEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getResistance() {
 		return resistanceEClass;
 	}
 
@@ -395,9 +427,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResistance_Fire()
-	{
-		return (EAttribute)resistanceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getResistance_Fire() {
+		return (EAttribute) resistanceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -406,9 +437,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResistance_Water()
-	{
-		return (EAttribute)resistanceEClass.getEStructuralFeatures().get(1);
+	public EAttribute getResistance_Water() {
+		return (EAttribute) resistanceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -417,9 +447,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResistance_Ice()
-	{
-		return (EAttribute)resistanceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getResistance_Ice() {
+		return (EAttribute) resistanceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -428,9 +457,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResistance_Thunder()
-	{
-		return (EAttribute)resistanceEClass.getEStructuralFeatures().get(3);
+	public EAttribute getResistance_Thunder() {
+		return (EAttribute) resistanceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -439,9 +467,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getResistance_Dragon()
-	{
-		return (EAttribute)resistanceEClass.getEStructuralFeatures().get(4);
+	public EAttribute getResistance_Dragon() {
+		return (EAttribute) resistanceEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -450,8 +477,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getSkill()
-	{
+	public EClass getSkill() {
 		return skillEClass;
 	}
 
@@ -461,9 +487,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_Id()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSkill_Id() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -472,9 +497,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_Slug()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(1);
+	public EAttribute getSkill_Slug() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -483,9 +507,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_Level()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(2);
+	public EAttribute getSkill_Level() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -494,9 +517,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_Description()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(3);
+	public EAttribute getSkill_Description() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -505,9 +527,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_Skill()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(4);
+	public EAttribute getSkill_Skill() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -516,9 +537,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getSkill_SkillName()
-	{
-		return (EAttribute)skillEClass.getEStructuralFeatures().get(5);
+	public EAttribute getSkill_SkillName() {
+		return (EAttribute) skillEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -527,9 +547,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getSkill_Armor()
-	{
-		return (EReference)skillEClass.getEStructuralFeatures().get(6);
+	public EReference getSkill_Charm() {
+		return (EReference) skillEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -538,8 +557,27 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getItem()
-	{
+	public EReference getSkill_Decoration() {
+		return (EReference) skillEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSkill_Weapon() {
+		return (EReference) skillEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getItem() {
 		return itemEClass;
 	}
 
@@ -549,9 +587,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItem_Id()
-	{
-		return (EAttribute)itemEClass.getEStructuralFeatures().get(0);
+	public EAttribute getItem_Id() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -560,9 +597,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItem_Name()
-	{
-		return (EAttribute)itemEClass.getEStructuralFeatures().get(1);
+	public EAttribute getItem_Name() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -571,9 +607,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItem_Description()
-	{
-		return (EAttribute)itemEClass.getEStructuralFeatures().get(2);
+	public EAttribute getItem_Description() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -582,9 +617,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getItem_Rarity()
-	{
-		return (EAttribute)itemEClass.getEStructuralFeatures().get(3);
+	public EAttribute getItem_Rarity() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -593,8 +627,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getMaterial()
-	{
+	public EClass getMaterial() {
 		return materialEClass;
 	}
 
@@ -604,9 +637,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getMaterial_Quantity()
-	{
-		return (EAttribute)materialEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMaterial_Quantity() {
+		return (EAttribute) materialEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -615,9 +647,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getMaterial_Armor()
-	{
-		return (EReference)materialEClass.getEStructuralFeatures().get(1);
+	public EReference getMaterial_Armor() {
+		return (EReference) materialEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -626,9 +657,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EReference getMaterial_Item()
-	{
-		return (EReference)materialEClass.getEStructuralFeatures().get(2);
+	public EReference getMaterial_Item() {
+		return (EReference) materialEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -637,8 +667,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EClass getDefence()
-	{
+	public EClass getDefence() {
 		return defenceEClass;
 	}
 
@@ -648,9 +677,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDefence_Base()
-	{
-		return (EAttribute)defenceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDefence_Base() {
+		return (EAttribute) defenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -659,9 +687,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDefence_Max()
-	{
-		return (EAttribute)defenceEClass.getEStructuralFeatures().get(1);
+	public EAttribute getDefence_Max() {
+		return (EAttribute) defenceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -670,9 +697,8 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDefence_Augmented()
-	{
-		return (EAttribute)defenceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getDefence_Augmented() {
+		return (EAttribute) defenceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -681,9 +707,328 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * @generated
 	 */
 	@Override
-	public MHW_API_DSLFactory getMHW_API_DSLFactory()
-	{
-		return (MHW_API_DSLFactory)getEFactoryInstance();
+	public EClass getCharm() {
+		return charmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCharm_Skill() {
+		return (EReference) charmEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCharm_Name() {
+		return (EAttribute) charmEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCharm_Id() {
+		return (EAttribute) charmEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCharm_Rarity() {
+		return (EAttribute) charmEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCharm_Level() {
+		return (EAttribute) charmEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDecoration() {
+		return decorationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDecoration_Id() {
+		return (EAttribute) decorationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDecoration_Name() {
+		return (EAttribute) decorationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDecoration_Rarity() {
+		return (EAttribute) decorationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDecoration_Skill() {
+		return (EReference) decorationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDecoration_Slot() {
+		return (EReference) decorationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDecoration_Rank() {
+		return (EAttribute) decorationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getWeapon() {
+		return weaponEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWeapon_Slot() {
+		return (EReference) weaponEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWeapon_Skill() {
+		return (EReference) weaponEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeapon_Name() {
+		return (EAttribute) weaponEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeapon_Id() {
+		return (EAttribute) weaponEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeapon_Type() {
+		return (EAttribute) weaponEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeapon_Rarity() {
+		return (EAttribute) weaponEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getWeapon_Attack() {
+		return (EAttribute) weaponEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getWeapon_Element() {
+		return (EReference) weaponEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getElement() {
+		return elementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getElement_Name() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getElement_Value() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getElement_Weapon() {
+		return (EReference) elementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRequest() {
+		return requestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRequest_Request() {
+		return (EAttribute) requestEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequest_Armor() {
+		return (EReference) requestEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequest_Weapon() {
+		return (EReference) requestEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequest_Decoration() {
+		return (EReference) requestEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequest_Charm() {
+		return (EReference) requestEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public MHW_API_DSLFactory getMHW_API_DSLFactory() {
+		return (MHW_API_DSLFactory) getEFactoryInstance();
 	}
 
 	/**
@@ -700,9 +1045,9 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents()
-	{
-		if (isCreated) return;
+	public void createPackageContents() {
+		if (isCreated)
+			return;
 		isCreated = true;
 
 		// Create classes and their features
@@ -716,9 +1061,9 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 		createEAttribute(armorEClass, ARMOR__IMAGE_MALE);
 		createEAttribute(armorEClass, ARMOR__IMAGE_FEMALE);
 		createEReference(armorEClass, ARMOR__SLOT);
-		createEReference(armorEClass, ARMOR__SKILL);
 		createEReference(armorEClass, ARMOR__DEFENCE);
 		createEReference(armorEClass, ARMOR__RESISTANCE);
+		createEReference(armorEClass, ARMOR__SKILL);
 
 		armorSetEClass = createEClass(ARMOR_SET);
 		createEAttribute(armorSetEClass, ARMOR_SET__ID);
@@ -729,6 +1074,7 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 
 		slotEClass = createEClass(SLOT);
 		createEAttribute(slotEClass, SLOT__RANK);
+		createEReference(slotEClass, SLOT__DECORATION);
 
 		resistanceEClass = createEClass(RESISTANCE);
 		createEAttribute(resistanceEClass, RESISTANCE__FIRE);
@@ -744,7 +1090,9 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 		createEAttribute(skillEClass, SKILL__DESCRIPTION);
 		createEAttribute(skillEClass, SKILL__SKILL);
 		createEAttribute(skillEClass, SKILL__SKILL_NAME);
-		createEReference(skillEClass, SKILL__ARMOR);
+		createEReference(skillEClass, SKILL__CHARM);
+		createEReference(skillEClass, SKILL__DECORATION);
+		createEReference(skillEClass, SKILL__WEAPON);
 
 		itemEClass = createEClass(ITEM);
 		createEAttribute(itemEClass, ITEM__ID);
@@ -761,6 +1109,43 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 		createEAttribute(defenceEClass, DEFENCE__BASE);
 		createEAttribute(defenceEClass, DEFENCE__MAX);
 		createEAttribute(defenceEClass, DEFENCE__AUGMENTED);
+
+		charmEClass = createEClass(CHARM);
+		createEReference(charmEClass, CHARM__SKILL);
+		createEAttribute(charmEClass, CHARM__NAME);
+		createEAttribute(charmEClass, CHARM__ID);
+		createEAttribute(charmEClass, CHARM__RARITY);
+		createEAttribute(charmEClass, CHARM__LEVEL);
+
+		decorationEClass = createEClass(DECORATION);
+		createEAttribute(decorationEClass, DECORATION__ID);
+		createEAttribute(decorationEClass, DECORATION__NAME);
+		createEAttribute(decorationEClass, DECORATION__RARITY);
+		createEReference(decorationEClass, DECORATION__SKILL);
+		createEReference(decorationEClass, DECORATION__SLOT);
+		createEAttribute(decorationEClass, DECORATION__RANK);
+
+		weaponEClass = createEClass(WEAPON);
+		createEReference(weaponEClass, WEAPON__SLOT);
+		createEReference(weaponEClass, WEAPON__SKILL);
+		createEAttribute(weaponEClass, WEAPON__NAME);
+		createEAttribute(weaponEClass, WEAPON__ID);
+		createEAttribute(weaponEClass, WEAPON__TYPE);
+		createEAttribute(weaponEClass, WEAPON__RARITY);
+		createEAttribute(weaponEClass, WEAPON__ATTACK);
+		createEReference(weaponEClass, WEAPON__ELEMENT);
+
+		elementEClass = createEClass(ELEMENT);
+		createEAttribute(elementEClass, ELEMENT__NAME);
+		createEAttribute(elementEClass, ELEMENT__VALUE);
+		createEReference(elementEClass, ELEMENT__WEAPON);
+
+		requestEClass = createEClass(REQUEST);
+		createEAttribute(requestEClass, REQUEST__REQUEST);
+		createEReference(requestEClass, REQUEST__ARMOR);
+		createEReference(requestEClass, REQUEST__WEAPON);
+		createEReference(requestEClass, REQUEST__DECORATION);
+		createEReference(requestEClass, REQUEST__CHARM);
 	}
 
 	/**
@@ -777,15 +1162,19 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents()
-	{
-		if (isInitialized) return;
+	public void initializePackageContents() {
+		if (isInitialized)
+			return;
 		isInitialized = true;
 
 		// Initialize package
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -795,60 +1184,196 @@ public class MHW_API_DSLPackageImpl extends EPackageImpl implements MHW_API_DSLP
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(armorEClass, Armor.class, "Armor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArmor_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_Slug(), ecorePackage.getEString(), "slug", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_Type(), ecorePackage.getEString(), "type", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_Rank(), ecorePackage.getEString(), "rank", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_ImageMale(), ecorePackage.getEString(), "imageMale", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmor_ImageFemale(), ecorePackage.getEString(), "imageFemale", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArmor_Slot(), this.getSlot(), null, "slot", null, 0, -1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArmor_Skill(), this.getSkill(), this.getSkill_Armor(), "skill", null, 0, -1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArmor_Defence(), this.getDefence(), null, "defence", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArmor_Resistance(), this.getResistance(), null, "resistance", null, 0, 1, Armor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Slug(), ecorePackage.getEString(), "slug", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Type(), ecorePackage.getEString(), "type", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Rank(), ecorePackage.getEString(), "rank", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_ImageMale(), ecorePackage.getEString(), "imageMale", null, 0, 1, Armor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmor_ImageFemale(), ecorePackage.getEString(), "imageFemale", null, 0, 1, Armor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArmor_Slot(), this.getSlot(), null, "slot", null, 0, -1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getArmor_Defence(), this.getDefence(), null, "defence", null, 0, 1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getArmor_Resistance(), this.getResistance(), null, "resistance", null, 0, 1, Armor.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArmor_Skill(), this.getSkill(), null, "skill", null, 0, -1, Armor.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
-		initEClass(armorSetEClass, ArmorSet.class, "ArmorSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArmorSet_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ArmorSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmorSet_Name(), ecorePackage.getEString(), "name", null, 0, 1, ArmorSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmorSet_Rank(), ecorePackage.getEString(), "rank", null, 0, 1, ArmorSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArmorSet_Pieces(), ecorePackage.getEInt(), "pieces", null, 0, 1, ArmorSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArmorSet_Armor(), this.getArmor(), null, "armor", null, 1, -1, ArmorSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(armorSetEClass, ArmorSet.class, "ArmorSet", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArmorSet_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ArmorSet.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmorSet_Name(), ecorePackage.getEString(), "name", null, 0, 1, ArmorSet.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmorSet_Rank(), ecorePackage.getEString(), "rank", null, 0, 1, ArmorSet.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArmorSet_Pieces(), ecorePackage.getEInt(), "pieces", null, 0, 1, ArmorSet.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArmorSet_Armor(), this.getArmor(), null, "armor", null, 1, -1, ArmorSet.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(slotEClass, Slot.class, "Slot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSlot_Rank(), ecorePackage.getEInt(), "rank", null, 0, 1, Slot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSlot_Rank(), ecorePackage.getEInt(), "rank", null, 0, 1, Slot.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSlot_Decoration(), this.getDecoration(), this.getDecoration_Slot(), "decoration", null, 0, 1,
+				Slot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resistanceEClass, Resistance.class, "Resistance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResistance_Fire(), ecorePackage.getEInt(), "fire", null, 0, 1, Resistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResistance_Water(), ecorePackage.getEInt(), "water", null, 0, 1, Resistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResistance_Ice(), ecorePackage.getEInt(), "ice", null, 0, 1, Resistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResistance_Thunder(), ecorePackage.getEInt(), "thunder", null, 0, 1, Resistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResistance_Dragon(), ecorePackage.getEInt(), "dragon", null, 0, 1, Resistance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resistanceEClass, Resistance.class, "Resistance", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResistance_Fire(), ecorePackage.getEInt(), "fire", null, 0, 1, Resistance.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResistance_Water(), ecorePackage.getEInt(), "water", null, 0, 1, Resistance.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResistance_Ice(), ecorePackage.getEInt(), "ice", null, 0, 1, Resistance.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResistance_Thunder(), ecorePackage.getEInt(), "thunder", null, 0, 1, Resistance.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResistance_Dragon(), ecorePackage.getEInt(), "dragon", null, 0, 1, Resistance.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(skillEClass, Skill.class, "Skill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSkill_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_Slug(), ecorePackage.getEString(), "slug", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_Level(), ecorePackage.getEInt(), "level", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_Description(), ecorePackage.getEString(), "description", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_Skill(), ecorePackage.getEInt(), "skill", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSkill_SkillName(), ecorePackage.getEString(), "skillName", null, 0, 1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSkill_Armor(), this.getArmor(), this.getArmor_Skill(), "armor", null, 0, -1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Skill.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Slug(), ecorePackage.getEString(), "slug", null, 0, 1, Skill.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Level(), ecorePackage.getEInt(), "level", null, 0, 1, Skill.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Description(), ecorePackage.getEString(), "description", null, 0, 1, Skill.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_Skill(), ecorePackage.getEInt(), "skill", null, 0, 1, Skill.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSkill_SkillName(), ecorePackage.getEString(), "skillName", null, 0, 1, Skill.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSkill_Charm(), this.getCharm(), this.getCharm_Skill(), "charm", null, 0, 1, Skill.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSkill_Decoration(), this.getDecoration(), this.getDecoration_Skill(), "decoration", null, 0,
+				1, Skill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSkill_Weapon(), this.getWeapon(), this.getWeapon_Skill(), "weapon", null, 0, -1, Skill.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getItem_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItem_Description(), ecorePackage.getEString(), "description", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getItem_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Description(), ecorePackage.getEString(), "description", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(materialEClass, Material.class, "Material", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMaterial_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Material.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMaterial_Armor(), this.getArmor(), null, "armor", null, 0, 1, Material.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMaterial_Item(), this.getItem(), null, "item", null, 0, 1, Material.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(materialEClass, Material.class, "Material", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMaterial_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Material.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMaterial_Armor(), this.getArmor(), null, "armor", null, 0, 1, Material.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getMaterial_Item(), this.getItem(), null, "item", null, 0, 1, Material.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(defenceEClass, Defence.class, "Defence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDefence_Base(), ecorePackage.getEInt(), "base", null, 0, 1, Defence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDefence_Max(), ecorePackage.getEInt(), "max", null, 0, 1, Defence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDefence_Augmented(), ecorePackage.getEInt(), "augmented", null, 0, 1, Defence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDefence_Base(), ecorePackage.getEInt(), "base", null, 0, 1, Defence.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDefence_Max(), ecorePackage.getEInt(), "max", null, 0, 1, Defence.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDefence_Augmented(), ecorePackage.getEInt(), "augmented", null, 0, 1, Defence.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(charmEClass, Charm.class, "Charm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCharm_Skill(), this.getSkill(), this.getSkill_Charm(), "skill", null, 1, -1, Charm.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCharm_Name(), ecorePackage.getEString(), "name", null, 0, 1, Charm.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCharm_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Charm.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCharm_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Charm.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCharm_Level(), ecorePackage.getEInt(), "level", null, 0, 1, Charm.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(decorationEClass, Decoration.class, "Decoration", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDecoration_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Decoration.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDecoration_Name(), ecorePackage.getEString(), "name", null, 0, 1, Decoration.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDecoration_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Decoration.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDecoration_Skill(), this.getSkill(), this.getSkill_Decoration(), "skill", null, 1, 1,
+				Decoration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDecoration_Slot(), this.getSlot(), this.getSlot_Decoration(), "slot", null, 0, 1,
+				Decoration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDecoration_Rank(), ecorePackage.getEInt(), "rank", null, 0, 1, Decoration.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(weaponEClass, Weapon.class, "Weapon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWeapon_Slot(), this.getSlot(), null, "slot", null, 0, -1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getWeapon_Skill(), this.getSkill(), this.getSkill_Weapon(), "skill", null, 0, 1, Weapon.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeapon_Name(), ecorePackage.getEString(), "name", null, 0, 1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeapon_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeapon_Type(), ecorePackage.getEString(), "type", null, 0, 1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeapon_Rarity(), ecorePackage.getEInt(), "rarity", null, 0, 1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWeapon_Attack(), ecorePackage.getEString(), "attack", null, 0, 1, Weapon.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWeapon_Element(), this.getElement(), this.getElement_Weapon(), "element", null, 0, 1,
+				Weapon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElement_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Element.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_Weapon(), this.getWeapon(), this.getWeapon_Element(), "weapon", null, 0, 1,
+				Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(requestEClass, Request.class, "Request", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRequest_Request(), theXMLTypePackage.getString(), "request", null, 0, 1, Request.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequest_Armor(), this.getArmor(), null, "armor", null, 0, -1, Request.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getRequest_Weapon(), this.getWeapon(), null, "weapon", null, 0, -1, Request.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getRequest_Decoration(), this.getDecoration(), null, "decoration", null, 0, -1, Request.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequest_Charm(), this.getCharm(), null, "charm", null, 0, -1, Request.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

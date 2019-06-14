@@ -10,7 +10,7 @@
       <!-- @generated mHW_API_DSL -->
       <factory
             uri="http://www.example.org/mHW_API_DSL"
-            class="mhw-api-dsl.mHW_API_DSL.provider.MHW_API_DSLItemProviderAdapterFactory"
+            class="mhw_api_dsl.mHW_API_DSL.provider.MHW_API_DSLItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

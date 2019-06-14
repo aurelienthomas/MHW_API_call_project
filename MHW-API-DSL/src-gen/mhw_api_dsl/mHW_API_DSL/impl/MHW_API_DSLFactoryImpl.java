@@ -18,26 +18,21 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLFactory
-{
+public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static MHW_API_DSLFactory init()
-	{
-		try
-		{
-			MHW_API_DSLFactory theMHW_API_DSLFactory = (MHW_API_DSLFactory)EPackage.Registry.INSTANCE.getEFactory(MHW_API_DSLPackage.eNS_URI);
-			if (theMHW_API_DSLFactory != null)
-			{
+	public static MHW_API_DSLFactory init() {
+		try {
+			MHW_API_DSLFactory theMHW_API_DSLFactory = (MHW_API_DSLFactory) EPackage.Registry.INSTANCE
+					.getEFactory(MHW_API_DSLPackage.eNS_URI);
+			if (theMHW_API_DSLFactory != null) {
 				return theMHW_API_DSLFactory;
 			}
-		}
-		catch (Exception exception)
-		{
+		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new MHW_API_DSLFactoryImpl();
@@ -49,8 +44,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MHW_API_DSLFactoryImpl()
-	{
+	public MHW_API_DSLFactoryImpl() {
 		super();
 	}
 
@@ -60,20 +54,36 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass)
-	{
-		switch (eClass.getClassifierID())
-		{
-			case MHW_API_DSLPackage.ARMOR: return createArmor();
-			case MHW_API_DSLPackage.ARMOR_SET: return createArmorSet();
-			case MHW_API_DSLPackage.SLOT: return createSlot();
-			case MHW_API_DSLPackage.RESISTANCE: return createResistance();
-			case MHW_API_DSLPackage.SKILL: return createSkill();
-			case MHW_API_DSLPackage.ITEM: return createItem();
-			case MHW_API_DSLPackage.MATERIAL: return createMaterial();
-			case MHW_API_DSLPackage.DEFENCE: return createDefence();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+		case MHW_API_DSLPackage.ARMOR:
+			return createArmor();
+		case MHW_API_DSLPackage.ARMOR_SET:
+			return createArmorSet();
+		case MHW_API_DSLPackage.SLOT:
+			return createSlot();
+		case MHW_API_DSLPackage.RESISTANCE:
+			return createResistance();
+		case MHW_API_DSLPackage.SKILL:
+			return createSkill();
+		case MHW_API_DSLPackage.ITEM:
+			return createItem();
+		case MHW_API_DSLPackage.MATERIAL:
+			return createMaterial();
+		case MHW_API_DSLPackage.DEFENCE:
+			return createDefence();
+		case MHW_API_DSLPackage.CHARM:
+			return createCharm();
+		case MHW_API_DSLPackage.DECORATION:
+			return createDecoration();
+		case MHW_API_DSLPackage.WEAPON:
+			return createWeapon();
+		case MHW_API_DSLPackage.ELEMENT:
+			return createElement();
+		case MHW_API_DSLPackage.REQUEST:
+			return createRequest();
+		default:
+			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -83,8 +93,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Armor createArmor()
-	{
+	public Armor createArmor() {
 		ArmorImpl armor = new ArmorImpl();
 		return armor;
 	}
@@ -95,8 +104,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public ArmorSet createArmorSet()
-	{
+	public ArmorSet createArmorSet() {
 		ArmorSetImpl armorSet = new ArmorSetImpl();
 		return armorSet;
 	}
@@ -107,8 +115,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Slot createSlot()
-	{
+	public Slot createSlot() {
 		SlotImpl slot = new SlotImpl();
 		return slot;
 	}
@@ -119,8 +126,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Resistance createResistance()
-	{
+	public Resistance createResistance() {
 		ResistanceImpl resistance = new ResistanceImpl();
 		return resistance;
 	}
@@ -131,8 +137,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Skill createSkill()
-	{
+	public Skill createSkill() {
 		SkillImpl skill = new SkillImpl();
 		return skill;
 	}
@@ -143,8 +148,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Item createItem()
-	{
+	public Item createItem() {
 		ItemImpl item = new ItemImpl();
 		return item;
 	}
@@ -155,8 +159,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Material createMaterial()
-	{
+	public Material createMaterial() {
 		MaterialImpl material = new MaterialImpl();
 		return material;
 	}
@@ -167,8 +170,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public Defence createDefence()
-	{
+	public Defence createDefence() {
 		DefenceImpl defence = new DefenceImpl();
 		return defence;
 	}
@@ -179,9 +181,63 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Override
-	public MHW_API_DSLPackage getMHW_API_DSLPackage()
-	{
-		return (MHW_API_DSLPackage)getEPackage();
+	public Charm createCharm() {
+		CharmImpl charm = new CharmImpl();
+		return charm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Decoration createDecoration() {
+		DecorationImpl decoration = new DecorationImpl();
+		return decoration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Weapon createWeapon() {
+		WeaponImpl weapon = new WeaponImpl();
+		return weapon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Request createRequest() {
+		RequestImpl request = new RequestImpl();
+		return request;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public MHW_API_DSLPackage getMHW_API_DSLPackage() {
+		return (MHW_API_DSLPackage) getEPackage();
 	}
 
 	/**
@@ -191,8 +247,7 @@ public class MHW_API_DSLFactoryImpl extends EFactoryImpl implements MHW_API_DSLF
 	 * @generated
 	 */
 	@Deprecated
-	public static MHW_API_DSLPackage getPackage()
-	{
+	public static MHW_API_DSLPackage getPackage() {
 		return MHW_API_DSLPackage.eINSTANCE;
 	}
 

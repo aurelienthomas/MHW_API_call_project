@@ -10,7 +10,7 @@
       <!-- @generated mHW_API_DSL -->
       <package
             uri="http://www.example.org/mHW_API_DSL"
-            class="mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage"
+            class="mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage"
             genModel="model/mHW_API_DSL.genmodel"/>
    </extension>
 

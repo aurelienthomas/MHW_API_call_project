@@ -20,16 +20,15 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ItemImpl#getId <em>Id</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ItemImpl#getName <em>Name</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ItemImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ItemImpl#getRarity <em>Rarity</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ItemImpl#getId <em>Id</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ItemImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ItemImpl#getRarity <em>Rarity</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ItemImpl extends MinimalEObjectImpl.Container implements Item
-{
+public class ItemImpl extends MinimalEObjectImpl.Container implements Item {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -115,8 +114,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ItemImpl()
-	{
+	protected ItemImpl() {
 		super();
 	}
 
@@ -126,8 +124,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return MHW_API_DSLPackage.Literals.ITEM;
 	}
 
@@ -137,8 +134,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public int getId()
-	{
+	public int getId() {
 		return id;
 	}
 
@@ -148,8 +144,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void setId(int newId)
-	{
+	public void setId(int newId) {
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
@@ -162,8 +157,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
 
@@ -173,8 +167,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void setName(String newName)
-	{
+	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -187,8 +180,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public String getDescription()
-	{
+	public String getDescription() {
 		return description;
 	}
 
@@ -198,12 +190,12 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void setDescription(String newDescription)
-	{
+	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.ITEM__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.ITEM__DESCRIPTION, oldDescription,
+					description));
 	}
 
 	/**
@@ -212,8 +204,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public int getRarity()
-	{
+	public int getRarity() {
 		return rarity;
 	}
 
@@ -223,8 +214,7 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void setRarity(int newRarity)
-	{
+	public void setRarity(int newRarity) {
 		int oldRarity = rarity;
 		rarity = newRarity;
 		if (eNotificationRequired())
@@ -237,18 +227,16 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ITEM__ID:
-				return getId();
-			case MHW_API_DSLPackage.ITEM__NAME:
-				return getName();
-			case MHW_API_DSLPackage.ITEM__DESCRIPTION:
-				return getDescription();
-			case MHW_API_DSLPackage.ITEM__RARITY:
-				return getRarity();
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ITEM__ID:
+			return getId();
+		case MHW_API_DSLPackage.ITEM__NAME:
+			return getName();
+		case MHW_API_DSLPackage.ITEM__DESCRIPTION:
+			return getDescription();
+		case MHW_API_DSLPackage.ITEM__RARITY:
+			return getRarity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,22 +247,20 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ITEM__ID:
-				setId((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.ITEM__NAME:
-				setName((String)newValue);
-				return;
-			case MHW_API_DSLPackage.ITEM__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
-			case MHW_API_DSLPackage.ITEM__RARITY:
-				setRarity((Integer)newValue);
-				return;
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ITEM__ID:
+			setId((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.ITEM__NAME:
+			setName((String) newValue);
+			return;
+		case MHW_API_DSLPackage.ITEM__DESCRIPTION:
+			setDescription((String) newValue);
+			return;
+		case MHW_API_DSLPackage.ITEM__RARITY:
+			setRarity((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -285,22 +271,20 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ITEM__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ITEM__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ITEM__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.ITEM__RARITY:
-				setRarity(RARITY_EDEFAULT);
-				return;
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ITEM__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ITEM__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ITEM__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.ITEM__RARITY:
+			setRarity(RARITY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,18 +295,16 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.ITEM__ID:
-				return id != ID_EDEFAULT;
-			case MHW_API_DSLPackage.ITEM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MHW_API_DSLPackage.ITEM__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case MHW_API_DSLPackage.ITEM__RARITY:
-				return rarity != RARITY_EDEFAULT;
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.ITEM__ID:
+			return id != ID_EDEFAULT;
+		case MHW_API_DSLPackage.ITEM__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case MHW_API_DSLPackage.ITEM__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		case MHW_API_DSLPackage.ITEM__RARITY:
+			return rarity != RARITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -333,9 +315,9 @@ public class ItemImpl extends MinimalEObjectImpl.Container implements Item
 	 * @generated
 	 */
 	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");

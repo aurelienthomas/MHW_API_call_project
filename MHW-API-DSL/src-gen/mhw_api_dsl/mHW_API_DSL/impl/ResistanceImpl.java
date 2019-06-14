@@ -20,17 +20,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ResistanceImpl#getFire <em>Fire</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ResistanceImpl#getWater <em>Water</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ResistanceImpl#getIce <em>Ice</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ResistanceImpl#getThunder <em>Thunder</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.impl.ResistanceImpl#getDragon <em>Dragon</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ResistanceImpl#getFire <em>Fire</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ResistanceImpl#getWater <em>Water</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ResistanceImpl#getIce <em>Ice</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ResistanceImpl#getThunder <em>Thunder</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.impl.ResistanceImpl#getDragon <em>Dragon</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resistance
-{
+public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resistance {
 	/**
 	 * The default value of the '{@link #getFire() <em>Fire</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,8 +135,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResistanceImpl()
-	{
+	protected ResistanceImpl() {
 		super();
 	}
 
@@ -147,8 +145,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return MHW_API_DSLPackage.Literals.RESISTANCE;
 	}
 
@@ -158,8 +155,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public int getFire()
-	{
+	public int getFire() {
 		return fire;
 	}
 
@@ -169,8 +165,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void setFire(int newFire)
-	{
+	public void setFire(int newFire) {
 		int oldFire = fire;
 		fire = newFire;
 		if (eNotificationRequired())
@@ -183,8 +178,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public int getWater()
-	{
+	public int getWater() {
 		return water;
 	}
 
@@ -194,12 +188,12 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void setWater(int newWater)
-	{
+	public void setWater(int newWater) {
 		int oldWater = water;
 		water = newWater;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__WATER, oldWater, water));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__WATER, oldWater,
+					water));
 	}
 
 	/**
@@ -208,8 +202,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public int getIce()
-	{
+	public int getIce() {
 		return ice;
 	}
 
@@ -219,8 +212,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void setIce(int newIce)
-	{
+	public void setIce(int newIce) {
 		int oldIce = ice;
 		ice = newIce;
 		if (eNotificationRequired())
@@ -233,8 +225,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public int getThunder()
-	{
+	public int getThunder() {
 		return thunder;
 	}
 
@@ -244,12 +235,12 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void setThunder(int newThunder)
-	{
+	public void setThunder(int newThunder) {
 		int oldThunder = thunder;
 		thunder = newThunder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__THUNDER, oldThunder, thunder));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__THUNDER, oldThunder,
+					thunder));
 	}
 
 	/**
@@ -258,8 +249,7 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public int getDragon()
-	{
+	public int getDragon() {
 		return dragon;
 	}
 
@@ -269,12 +259,12 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void setDragon(int newDragon)
-	{
+	public void setDragon(int newDragon) {
 		int oldDragon = dragon;
 		dragon = newDragon;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__DRAGON, oldDragon, dragon));
+			eNotify(new ENotificationImpl(this, Notification.SET, MHW_API_DSLPackage.RESISTANCE__DRAGON, oldDragon,
+					dragon));
 	}
 
 	/**
@@ -283,20 +273,18 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.RESISTANCE__FIRE:
-				return getFire();
-			case MHW_API_DSLPackage.RESISTANCE__WATER:
-				return getWater();
-			case MHW_API_DSLPackage.RESISTANCE__ICE:
-				return getIce();
-			case MHW_API_DSLPackage.RESISTANCE__THUNDER:
-				return getThunder();
-			case MHW_API_DSLPackage.RESISTANCE__DRAGON:
-				return getDragon();
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.RESISTANCE__FIRE:
+			return getFire();
+		case MHW_API_DSLPackage.RESISTANCE__WATER:
+			return getWater();
+		case MHW_API_DSLPackage.RESISTANCE__ICE:
+			return getIce();
+		case MHW_API_DSLPackage.RESISTANCE__THUNDER:
+			return getThunder();
+		case MHW_API_DSLPackage.RESISTANCE__DRAGON:
+			return getDragon();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -307,25 +295,23 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.RESISTANCE__FIRE:
-				setFire((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__WATER:
-				setWater((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__ICE:
-				setIce((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__THUNDER:
-				setThunder((Integer)newValue);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__DRAGON:
-				setDragon((Integer)newValue);
-				return;
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.RESISTANCE__FIRE:
+			setFire((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__WATER:
+			setWater((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__ICE:
+			setIce((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__THUNDER:
+			setThunder((Integer) newValue);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__DRAGON:
+			setDragon((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -336,25 +322,23 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.RESISTANCE__FIRE:
-				setFire(FIRE_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__WATER:
-				setWater(WATER_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__ICE:
-				setIce(ICE_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__THUNDER:
-				setThunder(THUNDER_EDEFAULT);
-				return;
-			case MHW_API_DSLPackage.RESISTANCE__DRAGON:
-				setDragon(DRAGON_EDEFAULT);
-				return;
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.RESISTANCE__FIRE:
+			setFire(FIRE_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__WATER:
+			setWater(WATER_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__ICE:
+			setIce(ICE_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__THUNDER:
+			setThunder(THUNDER_EDEFAULT);
+			return;
+		case MHW_API_DSLPackage.RESISTANCE__DRAGON:
+			setDragon(DRAGON_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -365,20 +349,18 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID)
-	{
-		switch (featureID)
-		{
-			case MHW_API_DSLPackage.RESISTANCE__FIRE:
-				return fire != FIRE_EDEFAULT;
-			case MHW_API_DSLPackage.RESISTANCE__WATER:
-				return water != WATER_EDEFAULT;
-			case MHW_API_DSLPackage.RESISTANCE__ICE:
-				return ice != ICE_EDEFAULT;
-			case MHW_API_DSLPackage.RESISTANCE__THUNDER:
-				return thunder != THUNDER_EDEFAULT;
-			case MHW_API_DSLPackage.RESISTANCE__DRAGON:
-				return dragon != DRAGON_EDEFAULT;
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case MHW_API_DSLPackage.RESISTANCE__FIRE:
+			return fire != FIRE_EDEFAULT;
+		case MHW_API_DSLPackage.RESISTANCE__WATER:
+			return water != WATER_EDEFAULT;
+		case MHW_API_DSLPackage.RESISTANCE__ICE:
+			return ice != ICE_EDEFAULT;
+		case MHW_API_DSLPackage.RESISTANCE__THUNDER:
+			return thunder != THUNDER_EDEFAULT;
+		case MHW_API_DSLPackage.RESISTANCE__DRAGON:
+			return dragon != DRAGON_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -389,9 +371,9 @@ public class ResistanceImpl extends MinimalEObjectImpl.Container implements Resi
 	 * @generated
 	 */
 	@Override
-	public String toString()
-	{
-		if (eIsProxy()) return super.toString();
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (fire: ");

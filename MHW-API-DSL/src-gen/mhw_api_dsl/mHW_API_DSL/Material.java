@@ -13,17 +13,16 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Material#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Material#getArmor <em>Armor</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Material#getItem <em>Item</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Material#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Material#getArmor <em>Armor</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Material#getItem <em>Item</em>}</li>
  * </ul>
  *
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial()
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial()
  * @model
  * @generated
  */
-public interface Material extends EObject
-{
+public interface Material extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +33,14 @@ public interface Material extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantity</em>' attribute.
 	 * @see #setQuantity(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Quantity()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Quantity()
 	 * @model
 	 * @generated
 	 */
 	int getQuantity();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Material#getQuantity <em>Quantity</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Material#getQuantity <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Quantity</em>' attribute.
@@ -60,14 +59,14 @@ public interface Material extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Armor</em>' reference.
 	 * @see #setArmor(Armor)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Armor()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Armor()
 	 * @model
 	 * @generated
 	 */
 	Armor getArmor();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Material#getArmor <em>Armor</em>}' reference.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Material#getArmor <em>Armor</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Armor</em>' reference.
@@ -86,14 +85,14 @@ public interface Material extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Item</em>' reference.
 	 * @see #setItem(Item)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Item()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getMaterial_Item()
 	 * @model
 	 * @generated
 	 */
 	Item getItem();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Material#getItem <em>Item</em>}' reference.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Material#getItem <em>Item</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Item</em>' reference.

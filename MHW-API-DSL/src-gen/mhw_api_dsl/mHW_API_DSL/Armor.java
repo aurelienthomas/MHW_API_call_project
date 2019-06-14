@@ -15,26 +15,25 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getId <em>Id</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getSlug <em>Slug</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getName <em>Name</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getType <em>Type</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getRank <em>Rank</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getRarity <em>Rarity</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getImageMale <em>Image Male</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getImageFemale <em>Image Female</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getSlot <em>Slot</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getSkill <em>Skill</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getDefence <em>Defence</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Armor#getResistance <em>Resistance</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getId <em>Id</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getSlug <em>Slug</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getName <em>Name</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getType <em>Type</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getRank <em>Rank</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getRarity <em>Rarity</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getImageMale <em>Image Male</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getImageFemale <em>Image Female</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getSlot <em>Slot</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getDefence <em>Defence</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getResistance <em>Resistance</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Armor#getSkill <em>Skill</em>}</li>
  * </ul>
  *
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor()
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor()
  * @model
  * @generated
  */
-public interface Armor extends EObject
-{
+public interface Armor extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,14 +44,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Id()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -71,14 +70,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Slug</em>' attribute.
 	 * @see #setSlug(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Slug()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Slug()
 	 * @model
 	 * @generated
 	 */
 	String getSlug();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getSlug <em>Slug</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getSlug <em>Slug</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Slug</em>' attribute.
@@ -97,14 +96,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Name()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -123,14 +122,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Type()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
@@ -149,14 +148,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rank</em>' attribute.
 	 * @see #setRank(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Rank()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Rank()
 	 * @model
 	 * @generated
 	 */
 	String getRank();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getRank <em>Rank</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getRank <em>Rank</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rank</em>' attribute.
@@ -175,14 +174,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rarity</em>' attribute.
 	 * @see #setRarity(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Rarity()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Rarity()
 	 * @model
 	 * @generated
 	 */
 	int getRarity();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getRarity <em>Rarity</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getRarity <em>Rarity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rarity</em>' attribute.
@@ -201,14 +200,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Male</em>' attribute.
 	 * @see #setImageMale(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_ImageMale()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_ImageMale()
 	 * @model
 	 * @generated
 	 */
 	String getImageMale();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getImageMale <em>Image Male</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getImageMale <em>Image Male</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Male</em>' attribute.
@@ -227,14 +226,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Female</em>' attribute.
 	 * @see #setImageFemale(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_ImageFemale()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_ImageFemale()
 	 * @model
 	 * @generated
 	 */
 	String getImageFemale();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getImageFemale <em>Image Female</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getImageFemale <em>Image Female</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Image Female</em>' attribute.
@@ -245,7 +244,7 @@ public interface Armor extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Slot</b></em>' containment reference list.
-	 * The list contents are of type {@link mhw-api-dsl.mHW_API_DSL.Slot}.
+	 * The list contents are of type {@link mhw_api_dsl.mHW_API_DSL.Slot}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Slot</em>' containment reference list isn't clear,
@@ -253,26 +252,24 @@ public interface Armor extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Slot</em>' containment reference list.
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Slot()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Slot()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Slot> getSlot();
 
 	/**
-	 * Returns the value of the '<em><b>Skill</b></em>' reference list.
-	 * The list contents are of type {@link mhw-api-dsl.mHW_API_DSL.Skill}.
-	 * It is bidirectional and its opposite is '{@link mhw-api-dsl.mHW_API_DSL.Skill#getArmor <em>Armor</em>}'.
+	 * Returns the value of the '<em><b>Skill</b></em>' containment reference list.
+	 * The list contents are of type {@link mhw_api_dsl.mHW_API_DSL.Skill}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Skill</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Skill</em>' reference list.
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Skill()
-	 * @see mhw-api-dsl.mHW_API_DSL.Skill#getArmor
-	 * @model opposite="armor"
+	 * @return the value of the '<em>Skill</em>' containment reference list.
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Skill()
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Skill> getSkill();
@@ -287,14 +284,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Defence</em>' reference.
 	 * @see #setDefence(Defence)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Defence()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Defence()
 	 * @model
 	 * @generated
 	 */
 	Defence getDefence();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getDefence <em>Defence</em>}' reference.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getDefence <em>Defence</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Defence</em>' reference.
@@ -313,14 +310,14 @@ public interface Armor extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resistance</em>' reference.
 	 * @see #setResistance(Resistance)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Resistance()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmor_Resistance()
 	 * @model
 	 * @generated
 	 */
 	Resistance getResistance();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Armor#getResistance <em>Resistance</em>}' reference.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Armor#getResistance <em>Resistance</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Resistance</em>' reference.

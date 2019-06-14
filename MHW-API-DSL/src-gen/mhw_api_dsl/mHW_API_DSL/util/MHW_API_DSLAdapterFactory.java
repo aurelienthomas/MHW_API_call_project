@@ -16,11 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage
  * @generated
  */
-public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
-{
+public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -35,10 +34,8 @@ public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MHW_API_DSLAdapterFactory()
-	{
-		if (modelPackage == null)
-		{
+	public MHW_API_DSLAdapterFactory() {
+		if (modelPackage == null) {
 			modelPackage = MHW_API_DSLPackage.eINSTANCE;
 		}
 	}
@@ -52,15 +49,12 @@ public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object)
-	{
-		if (object == modelPackage)
-		{
+	public boolean isFactoryForType(Object object) {
+		if (object == modelPackage) {
 			return true;
 		}
-		if (object instanceof EObject)
-		{
-			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		if (object instanceof EObject) {
+			return ((EObject) object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -71,55 +65,77 @@ public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MHW_API_DSLSwitch<Adapter> modelSwitch =
-		new MHW_API_DSLSwitch<Adapter>()
-		{
-			@Override
-			public Adapter caseArmor(Armor object)
-			{
-				return createArmorAdapter();
-			}
-			@Override
-			public Adapter caseArmorSet(ArmorSet object)
-			{
-				return createArmorSetAdapter();
-			}
-			@Override
-			public Adapter caseSlot(Slot object)
-			{
-				return createSlotAdapter();
-			}
-			@Override
-			public Adapter caseResistance(Resistance object)
-			{
-				return createResistanceAdapter();
-			}
-			@Override
-			public Adapter caseSkill(Skill object)
-			{
-				return createSkillAdapter();
-			}
-			@Override
-			public Adapter caseItem(Item object)
-			{
-				return createItemAdapter();
-			}
-			@Override
-			public Adapter caseMaterial(Material object)
-			{
-				return createMaterialAdapter();
-			}
-			@Override
-			public Adapter caseDefence(Defence object)
-			{
-				return createDefenceAdapter();
-			}
-			@Override
-			public Adapter defaultCase(EObject object)
-			{
-				return createEObjectAdapter();
-			}
-		};
+	protected MHW_API_DSLSwitch<Adapter> modelSwitch = new MHW_API_DSLSwitch<Adapter>() {
+		@Override
+		public Adapter caseArmor(Armor object) {
+			return createArmorAdapter();
+		}
+
+		@Override
+		public Adapter caseArmorSet(ArmorSet object) {
+			return createArmorSetAdapter();
+		}
+
+		@Override
+		public Adapter caseSlot(Slot object) {
+			return createSlotAdapter();
+		}
+
+		@Override
+		public Adapter caseResistance(Resistance object) {
+			return createResistanceAdapter();
+		}
+
+		@Override
+		public Adapter caseSkill(Skill object) {
+			return createSkillAdapter();
+		}
+
+		@Override
+		public Adapter caseItem(Item object) {
+			return createItemAdapter();
+		}
+
+		@Override
+		public Adapter caseMaterial(Material object) {
+			return createMaterialAdapter();
+		}
+
+		@Override
+		public Adapter caseDefence(Defence object) {
+			return createDefenceAdapter();
+		}
+
+		@Override
+		public Adapter caseCharm(Charm object) {
+			return createCharmAdapter();
+		}
+
+		@Override
+		public Adapter caseDecoration(Decoration object) {
+			return createDecorationAdapter();
+		}
+
+		@Override
+		public Adapter caseWeapon(Weapon object) {
+			return createWeaponAdapter();
+		}
+
+		@Override
+		public Adapter caseElement(Element object) {
+			return createElementAdapter();
+		}
+
+		@Override
+		public Adapter caseRequest(Request object) {
+			return createRequestAdapter();
+		}
+
+		@Override
+		public Adapter defaultCase(EObject object) {
+			return createEObjectAdapter();
+		}
+	};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.
@@ -130,129 +146,189 @@ public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target)
-	{
-		return modelSwitch.doSwitch((EObject)target);
+	public Adapter createAdapter(Notifier target) {
+		return modelSwitch.doSwitch((EObject) target);
 	}
 
-
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Armor <em>Armor</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Armor <em>Armor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Armor
+	 * @see mhw_api_dsl.mHW_API_DSL.Armor
 	 * @generated
 	 */
-	public Adapter createArmorAdapter()
-	{
+	public Adapter createArmorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.ArmorSet <em>Armor Set</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.ArmorSet <em>Armor Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.ArmorSet
+	 * @see mhw_api_dsl.mHW_API_DSL.ArmorSet
 	 * @generated
 	 */
-	public Adapter createArmorSetAdapter()
-	{
+	public Adapter createArmorSetAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Slot <em>Slot</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Slot <em>Slot</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Slot
+	 * @see mhw_api_dsl.mHW_API_DSL.Slot
 	 * @generated
 	 */
-	public Adapter createSlotAdapter()
-	{
+	public Adapter createSlotAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Resistance <em>Resistance</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Resistance <em>Resistance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Resistance
+	 * @see mhw_api_dsl.mHW_API_DSL.Resistance
 	 * @generated
 	 */
-	public Adapter createResistanceAdapter()
-	{
+	public Adapter createResistanceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Skill <em>Skill</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Skill <em>Skill</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Skill
+	 * @see mhw_api_dsl.mHW_API_DSL.Skill
 	 * @generated
 	 */
-	public Adapter createSkillAdapter()
-	{
+	public Adapter createSkillAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Item <em>Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Item <em>Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Item
+	 * @see mhw_api_dsl.mHW_API_DSL.Item
 	 * @generated
 	 */
-	public Adapter createItemAdapter()
-	{
+	public Adapter createItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Material <em>Material</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Material <em>Material</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Material
+	 * @see mhw_api_dsl.mHW_API_DSL.Material
 	 * @generated
 	 */
-	public Adapter createMaterialAdapter()
-	{
+	public Adapter createMaterialAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mhw-api-dsl.mHW_API_DSL.Defence <em>Defence</em>}'.
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Defence <em>Defence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mhw-api-dsl.mHW_API_DSL.Defence
+	 * @see mhw_api_dsl.mHW_API_DSL.Defence
 	 * @generated
 	 */
-	public Adapter createDefenceAdapter()
-	{
+	public Adapter createDefenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Charm <em>Charm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mhw_api_dsl.mHW_API_DSL.Charm
+	 * @generated
+	 */
+	public Adapter createCharmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Decoration <em>Decoration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mhw_api_dsl.mHW_API_DSL.Decoration
+	 * @generated
+	 */
+	public Adapter createDecorationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Weapon <em>Weapon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mhw_api_dsl.mHW_API_DSL.Weapon
+	 * @generated
+	 */
+	public Adapter createWeaponAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mhw_api_dsl.mHW_API_DSL.Element
+	 * @generated
+	 */
+	public Adapter createElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mhw_api_dsl.mHW_API_DSL.Request <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mhw_api_dsl.mHW_API_DSL.Request
+	 * @generated
+	 */
+	public Adapter createRequestAdapter() {
 		return null;
 	}
 
@@ -264,8 +340,7 @@ public class MHW_API_DSLAdapterFactory extends AdapterFactoryImpl
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter()
-	{
+	public Adapter createEObjectAdapter() {
 		return null;
 	}
 

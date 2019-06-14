@@ -15,19 +15,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getId <em>Id</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getName <em>Name</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getRank <em>Rank</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getPieces <em>Pieces</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getArmor <em>Armor</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getId <em>Id</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getName <em>Name</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getRank <em>Rank</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getPieces <em>Pieces</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getArmor <em>Armor</em>}</li>
  * </ul>
  *
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet()
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet()
  * @model
  * @generated
  */
-public interface ArmorSet extends EObject
-{
+public interface ArmorSet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,14 +37,14 @@ public interface ArmorSet extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Id()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -64,14 +63,14 @@ public interface ArmorSet extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Name()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -90,14 +89,14 @@ public interface ArmorSet extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rank</em>' attribute.
 	 * @see #setRank(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Rank()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Rank()
 	 * @model
 	 * @generated
 	 */
 	String getRank();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getRank <em>Rank</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getRank <em>Rank</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rank</em>' attribute.
@@ -116,14 +115,14 @@ public interface ArmorSet extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pieces</em>' attribute.
 	 * @see #setPieces(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Pieces()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Pieces()
 	 * @model
 	 * @generated
 	 */
 	int getPieces();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.ArmorSet#getPieces <em>Pieces</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.ArmorSet#getPieces <em>Pieces</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pieces</em>' attribute.
@@ -134,7 +133,7 @@ public interface ArmorSet extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Armor</b></em>' containment reference list.
-	 * The list contents are of type {@link mhw-api-dsl.mHW_API_DSL.Armor}.
+	 * The list contents are of type {@link mhw_api_dsl.mHW_API_DSL.Armor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Armor</em>' containment reference list isn't clear,
@@ -142,7 +141,7 @@ public interface ArmorSet extends EObject
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Armor</em>' containment reference list.
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Armor()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getArmorSet_Armor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

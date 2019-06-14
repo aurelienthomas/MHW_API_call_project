@@ -9,11 +9,10 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage
  * @generated
  */
-public interface MHW_API_DSLFactory extends EFactory
-{
+public interface MHW_API_DSLFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
@@ -93,6 +92,51 @@ public interface MHW_API_DSLFactory extends EFactory
 	 * @generated
 	 */
 	Defence createDefence();
+
+	/**
+	 * Returns a new object of class '<em>Charm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Charm</em>'.
+	 * @generated
+	 */
+	Charm createCharm();
+
+	/**
+	 * Returns a new object of class '<em>Decoration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Decoration</em>'.
+	 * @generated
+	 */
+	Decoration createDecoration();
+
+	/**
+	 * Returns a new object of class '<em>Weapon</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Weapon</em>'.
+	 * @generated
+	 */
+	Weapon createWeapon();
+
+	/**
+	 * Returns a new object of class '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element</em>'.
+	 * @generated
+	 */
+	Element createElement();
+
+	/**
+	 * Returns a new object of class '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request</em>'.
+	 * @generated
+	 */
+	Request createRequest();
 
 	/**
 	 * Returns the package supported by this factory.

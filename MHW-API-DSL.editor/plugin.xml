@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLModelWizardID"
+            id="mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLModelWizardID"
             name="%_UI_MHW_API_DSLModelWizard_label"
-            class="mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLModelWizard"
+            class="mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/MHW_API_DSLModelFile.gif">
          <description>%_UI_MHW_API_DSLModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated mHW_API_DSL -->
       <editor
-            id="mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLEditorID"
+            id="mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLEditorID"
             name="%_UI_MHW_API_DSLEditor_label"
             icon="icons/full/obj16/MHW_API_DSLModelFile.gif"
             extensions="mhw_api_dsl"
-            class="mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLEditor"
-            contributorClass="mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLActionBarContributor">
+            class="mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLEditor"
+            contributorClass="mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

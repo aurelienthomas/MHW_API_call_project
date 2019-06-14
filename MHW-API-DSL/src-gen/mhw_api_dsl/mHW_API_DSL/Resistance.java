@@ -13,19 +13,18 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Resistance#getFire <em>Fire</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Resistance#getWater <em>Water</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Resistance#getIce <em>Ice</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Resistance#getThunder <em>Thunder</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Resistance#getDragon <em>Dragon</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Resistance#getFire <em>Fire</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Resistance#getWater <em>Water</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Resistance#getIce <em>Ice</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Resistance#getThunder <em>Thunder</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Resistance#getDragon <em>Dragon</em>}</li>
  * </ul>
  *
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance()
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance()
  * @model
  * @generated
  */
-public interface Resistance extends EObject
-{
+public interface Resistance extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Fire</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,14 +35,14 @@ public interface Resistance extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fire</em>' attribute.
 	 * @see #setFire(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Fire()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Fire()
 	 * @model
 	 * @generated
 	 */
 	int getFire();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Resistance#getFire <em>Fire</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Resistance#getFire <em>Fire</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fire</em>' attribute.
@@ -62,14 +61,14 @@ public interface Resistance extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Water</em>' attribute.
 	 * @see #setWater(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Water()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Water()
 	 * @model
 	 * @generated
 	 */
 	int getWater();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Resistance#getWater <em>Water</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Resistance#getWater <em>Water</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Water</em>' attribute.
@@ -88,14 +87,14 @@ public interface Resistance extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ice</em>' attribute.
 	 * @see #setIce(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Ice()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Ice()
 	 * @model
 	 * @generated
 	 */
 	int getIce();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Resistance#getIce <em>Ice</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Resistance#getIce <em>Ice</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ice</em>' attribute.
@@ -114,14 +113,14 @@ public interface Resistance extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Thunder</em>' attribute.
 	 * @see #setThunder(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Thunder()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Thunder()
 	 * @model
 	 * @generated
 	 */
 	int getThunder();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Resistance#getThunder <em>Thunder</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Resistance#getThunder <em>Thunder</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Thunder</em>' attribute.
@@ -140,14 +139,14 @@ public interface Resistance extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dragon</em>' attribute.
 	 * @see #setDragon(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Dragon()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getResistance_Dragon()
 	 * @model
 	 * @generated
 	 */
 	int getDragon();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Resistance#getDragon <em>Dragon</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Resistance#getDragon <em>Dragon</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Dragon</em>' attribute.

@@ -5,11 +5,11 @@ Bundle-SymbolicName: MHW-API-DSL.editor;singleton:=true
 Automatic-Module-Name: MHW-API-DSL.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: mhw-api-dsl.mHW_API_DSL.presentation.MHW_API_DSLEditorPlugin$Implementation
+Bundle-Activator: mhw_api_dsl.mHW_API_DSL.presentation.MHW_API_DSLEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: mhw-api-dsl.mHW_API_DSL.presentation
+Export-Package: mhw_api_dsl.mHW_API_DSL.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  MHW-API-DSL.edit;visibility:=reexport,

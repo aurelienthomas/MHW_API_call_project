@@ -13,18 +13,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Item#getId <em>Id</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Item#getName <em>Name</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Item#getDescription <em>Description</em>}</li>
- *   <li>{@link mhw-api-dsl.mHW_API_DSL.Item#getRarity <em>Rarity</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Item#getId <em>Id</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Item#getName <em>Name</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Item#getDescription <em>Description</em>}</li>
+ *   <li>{@link mhw_api_dsl.mHW_API_DSL.Item#getRarity <em>Rarity</em>}</li>
  * </ul>
  *
- * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem()
+ * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem()
  * @model
  * @generated
  */
-public interface Item extends EObject
-{
+public interface Item extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,14 +34,14 @@ public interface Item extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Id()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Item#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Item#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -61,14 +60,14 @@ public interface Item extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Name()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Item#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Item#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -87,14 +86,14 @@ public interface Item extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Description()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Description()
 	 * @model
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Item#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Item#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -113,14 +112,14 @@ public interface Item extends EObject
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rarity</em>' attribute.
 	 * @see #setRarity(int)
-	 * @see mhw-api-dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Rarity()
+	 * @see mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage#getItem_Rarity()
 	 * @model
 	 * @generated
 	 */
 	int getRarity();
 
 	/**
-	 * Sets the value of the '{@link mhw-api-dsl.mHW_API_DSL.Item#getRarity <em>Rarity</em>}' attribute.
+	 * Sets the value of the '{@link mhw_api_dsl.mHW_API_DSL.Item#getRarity <em>Rarity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rarity</em>' attribute.
