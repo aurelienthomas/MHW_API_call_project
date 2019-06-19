@@ -10,6 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class HomeSectionComponent implements OnInit {
   requete: string;
+  reponse: any;
   constructor(public renderer: Renderer2, public apiService: ApiService) { }
 
   ngOnInit() {
@@ -17,7 +18,9 @@ export class HomeSectionComponent implements OnInit {
   }
 
   submit() {
-    this.apiService.sendText(this.requete);
+    this.apiService.sendText(this.requete).subscribe(res => {
+      this.reponse = JSON.stringify(res);
+    });
   }
 
 

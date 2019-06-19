@@ -16,8 +16,16 @@ export class ApiService {
 
   sendText(corp: string) {
     console.log('test');
-    this.http.get(this.apiUrl + '/').subscribe(res => {
-      console.log(res);
+    const reponseObservable = new Observable(observer => {
+      // this.http.get(environment.api_url + this.API_SKILL_BY_FAMILY + family + "/" + this.authService.getUserId()).subscribe(
+      this.http.get(this.apiUrl + '/').subscribe(res => {
+        observer.next(res);
+      },
+        err => {
+          console.log(err);
+        }
+      );
     });
+    return reponseObservable;
   }
 }
