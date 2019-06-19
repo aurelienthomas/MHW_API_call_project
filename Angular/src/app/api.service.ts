@@ -10,7 +10,7 @@ export class ApiService {
   apiWeapon = 'https://mhw-db.com/weapons';
   apiCharm = 'https://mhw-db.com/charms';
   apiDecoration = 'https://mhw-db.com/decorations';
-  apiUrl = 'localhost:9000';
+  apiUrl = 'http://localhost:9000';
 
   constructor(private http: HttpClient) { }
 
