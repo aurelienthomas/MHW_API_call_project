@@ -9,9 +9,17 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mHW_API_DSL -->
       <package
-            uri="http://www.example.org/mHW_API_DSL"
-            class="mhw_api_dsl.mHW_API_DSL.MHW_API_DSLPackage"
-            genModel="model/mHW_API_DSL.genmodel"/>
+            uri="http://m1ice.pdc.mhw.org/mhw"
+            class="m1ice.pdc.mhw.MHWPackage"
+            genModel="model/mhw.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mhw -->
+      <package
+            uri="http://www.example.org/mhw"
+            class="m1ice.pdc.mhw.MHWPackage"
+            genModel="model/mhw.genmodel"/>
    </extension>
 
 </plugin>

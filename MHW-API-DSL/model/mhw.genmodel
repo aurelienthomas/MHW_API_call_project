@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/m1ice.pdc.mhw.model/src-gen" modelPluginID="m1ice.pdc.mhw.model"
+    modelName="Mhw" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>mhw.ecore</foreignModel>
+  <genPackages prefix="MHW" basePackage="m1ice.pdc" disposableProviderFactory="true"
+      ecorePackage="mhw.ecore#/">
+    <genClasses ecoreClass="mhw.ecore#//Armor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/slug"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/rank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/rarity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/imageMale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Armor/imageFemale"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Armor/slot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Armor/defence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Armor/resistance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Armor/skill"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//ArmorSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//ArmorSet/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//ArmorSet/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//ArmorSet/rank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//ArmorSet/pieces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//ArmorSet/armor"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Slot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Slot/rank"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Slot/decoration"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Resistance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Resistance/fire"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Resistance/water"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Resistance/ice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Resistance/thunder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Resistance/dragon"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Skill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/slug"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Skill/skillName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Skill/charm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Skill/decoration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Skill/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Item/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Item/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Item/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Item/rarity"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Material">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Material/quantity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Material/armor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Material/item"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Defence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Defence/base"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Defence/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Defence/augmented"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Charm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Charm/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Charm/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Charm/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Charm/rarity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Charm/level"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Decoration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Decoration/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Decoration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Decoration/rarity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Decoration/skill"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Decoration/slot"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Decoration/rank"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Weapon">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Weapon/slot"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Weapon/skill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Weapon/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Weapon/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Weapon/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Weapon/rarity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Weapon/attack"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Weapon/element"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Element/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mhw.ecore#//Element/weapon"/>
+    </genClasses>
+    <genClasses ecoreClass="mhw.ecore#//Request">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mhw.ecore#//Request/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Request/armor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Request/weapon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Request/decoration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mhw.ecore#//Request/charm"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
