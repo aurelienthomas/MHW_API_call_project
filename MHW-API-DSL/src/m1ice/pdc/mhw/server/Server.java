@@ -29,9 +29,18 @@ public class Server {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
 		String result = getResultFromRequest("https://mhw-db.com/armor");
 		generateXMIFile(result);
-		  Blade.of().get("/", ctx -> ctx.text("Hello Blade")).start();
+		  Blade.of().get("/", ctx -> {
+		  ctx.json(result);
+		  })
+		  .post("/sendRequest", ctx -> {
+			  String request = ctx.fromString("request");
+			  ctx.text("nice request " + request);
+			  
+		  })
+		  .start();
 	}
 	
 	public static String getResultFromRequest(String request) throws Exception {
