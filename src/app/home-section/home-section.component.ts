@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ApiService} from '../api.service';
+
+
 
 @Component({
   selector: 'app-home-section',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-section.component.css']
 })
 export class HomeSectionComponent implements OnInit {
-
-  constructor() { }
+  request:String;
+  constructor(public renderer: Renderer2) 
+  { }
 
   ngOnInit() {
+
   }
 
+  submit(){
+    console.log(this.request);
+    //let text = this.renderer.selectRootElement("#request").text();
+    //this.apiService.sendText(text);
+  }
+
+  
 }
+
+
