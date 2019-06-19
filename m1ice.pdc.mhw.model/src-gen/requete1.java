@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
 import org.json.JSONArray;
 
 public class requete1 implements Request {
@@ -5,7 +11,11 @@ public class requete1 implements Request {
 	@Override
 	public JSONArray doRequestAndFilter() {
 		// TODO Auto-generated method stub
-		return new JSONArray(getResultFromRequest("https://mhw-db.com/armor"));
+		try {
+			return new JSONArray(getResultFromRequest("https://mhw-db.com/armor"));
+		}catch(Exception e) {
+			return new JSONArray("");
+		}
 	}
 	
 	public static String getResultFromRequest(String request) throws Exception {
