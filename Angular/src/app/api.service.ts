@@ -1,31 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class ApiService {
-  apiArmor: string = 'https://mhw-db.com/armor';
-  apiWeapon: string = 'https://mhw-db.com/weapons';
-  apiCharm: string = 'https://mhw-db.com/charms';
-  apiDecoration: string = 'https://mhw-db.com/decorations';
-  _baseUrl: string = 'localhost:9000';
+  apiArmor = 'https://mhw-db.com/armor';
+  apiWeapon = 'https://mhw-db.com/weapons';
+  apiCharm = 'https://mhw-db.com/charms';
+  apiDecoration = 'https://mhw-db.com/decorations';
+  apiUrl = 'localhost:9000';
 
-  constructor(public http: HttpClient) {
-    /*this.sendText("request").subscribe(res => {
+  constructor(private http: HttpClient) { }
+
+  sendText(corp: string) {
+    console.log('test');
+    this.http.get(this.apiUrl + '/').subscribe(res => {
       console.log(res);
-    });*/
-  }
-
-  sendText(request: any) {
-    console.log("Sending some stuff to the DSL")
-    return this.http.post(this._baseUrl + '/sendRequest', request);
-
-    /*public getArmor() {}
-  
-    public getWeapon() {}*/
-
-    /*return this.httpClient.get<Armor[]>(this.apiArmor,
-      { observe: 'response' }).pipe(tap(res => {
-        this.retrieve_pagination_links(res); 
-      }));*/
-
+    });
   }
 }

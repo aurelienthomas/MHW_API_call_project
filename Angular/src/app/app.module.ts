@@ -1,6 +1,8 @@
+import { ApiService } from './api.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { DecorationSectionComponent } from './decoration-section/decoration-sect
 import { HomeSectionComponent } from './home-section/home-section.component';
 import { ArmorComponent } from './armor/armor.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +24,16 @@ import { ArmorComponent } from './armor/armor.component';
     CharmSectionComponent,
     DecorationSectionComponent,
     HomeSectionComponent,
-    ArmorComponent
+    ArmorComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+
+    FormsModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

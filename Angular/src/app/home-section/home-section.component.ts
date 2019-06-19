@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ApiService} from '../api.service';
+import { ApiService } from '../api.service';
 
 
 
@@ -9,21 +9,18 @@ import { ApiService} from '../api.service';
   styleUrls: ['./home-section.component.css']
 })
 export class HomeSectionComponent implements OnInit {
-  request:String;
-  constructor(public renderer: Renderer2) 
-  { }
+  requete: string;
+  constructor(public renderer: Renderer2, public apiService: ApiService) { }
 
   ngOnInit() {
 
   }
 
-  submit(){
-    console.log(this.request);
-    //let text = this.renderer.selectRootElement("#request").text();
-    //this.apiService.sendText(text);
+  submit() {
+    this.apiService.sendText(this.requete);
   }
 
-  
+
 }
 
 
