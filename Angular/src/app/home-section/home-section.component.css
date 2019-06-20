@@ -1,0 +1,15 @@
+.liste {
+  display: block;
+}
+
+.liste-element {
+  border: solid 1px #555555;
+  display: flex;
+  margin: 2px;
+}
+
+.img {
+  border-right: 1px solid #555555;
+  width: 200px;
+  height: 200px;
+}

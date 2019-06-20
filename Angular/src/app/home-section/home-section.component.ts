@@ -19,7 +19,8 @@ export class HomeSectionComponent implements OnInit {
 
   submit() {
     this.apiService.sendText(this.requete).subscribe(res => {
-      this.reponse = JSON.stringify(res);
+      this.reponse = res;
+      console.log(this.reponse);
     });
   }
 

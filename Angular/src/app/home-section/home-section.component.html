@@ -8,6 +8,22 @@
     Submit
   </button>
   <div>
-    {{ reponse }}
+    <div class="liste">
+      <div *ngFor="let element of reponse" class="liste-element">
+        <img src="{{ element.assets.imageMale }}" class="img" />
+        <div class="info">
+          <h2 class="title">{{ element.name }}</h2>
+          <p class="desc">{{ element.description }}</p>
+          <ul>
+            <li style="width:50%;">
+              <span class="fa fa-globe"></span> {{ element.rarity }}
+            </li>
+            <li style="width:50%;">
+              <span class="fa fa-graduation-cap"></span> {{ element.type }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
